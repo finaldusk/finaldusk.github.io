@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Archives: 2016/9 | 王鑫磊的记事本</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/">
+  <link rel="alternate" href="/atom.xml" title="王鑫磊的记事本">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="shortcut icon" href="" />
+  <link rel="icon" href="" />
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+    <script>setLoadingBarProgress(20)</script>
+    <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				<!-- <i class="fa fa-home"></i> -->
+				王鑫磊的记事本
+			</a>
+
+				<div class='menu'>
+					<ul class='h-list'>
+                        
+    						
+    							<li>
+    								<a class='nav-home flat-box' href='/'>
+    									<i class='fa fa-home fa-'></i>&nbsp;主页
+    								</a>
+    							</li>
+    						
+    							<li>
+    								<a class='nav-search flat-box' href='https://search.wangxinlei.cn'>
+    									<i class='fa fa-search fa-'></i>&nbsp;搜索导航
+    								</a>
+    							</li>
+    						
+    							<li>
+    								<a class='nav-archives flat-box' href='/archives'>
+    									<i class='fa fa-archive fa-'></i>&nbsp;归档
+    								</a>
+    							</li>
+    						
+        			 
+					</ul>
+					<div class='underline'></div>
+				</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon"><i class="fa fa-search fa-fw"></i></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fa fa-search fa-fw" href='javascript:void(0)'></span></a></li>
+				
+				<li class='s-menu'><a class="fa fa-navicon fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				xaoxuu
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="fa fa-comments fa-fw flat-box" href='javascript:void(0)'></a></li>
+				<li class='s-top'><a class="fa fa-arrow-up fa-fw flat-box" href='javascript:void(0)'></a></li>
+				<li class='s-toc'><a class="fa fa-list-ul fa-fw flat-box" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+        <div class="header">王鑫磊的记事本</div>
+		<nav>
+            <ul>
+                
+                    
+                        <li>
+                            <a class='nav-home flat-box nav flat-box' href='/'><i class='fa fa-home fa-fw'></i>&nbsp;主页</a>
+                        </li>
+                    
+                        <li>
+                            <a class='nav-search flat-box nav flat-box' href='https://search.wangxinlei.cn'><i class='fa fa-search fa-fw'></i>&nbsp;搜索导航</a>
+                        </li>
+                    
+                        <li>
+                            <a class='nav-archives flat-box nav flat-box' href='/archives'><i class='fa fa-archive fa-fw'></i>&nbsp;归档</a>
+                        </li>
+                    
+             
+            </ul>
+		</nav>
+	</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+    <div class="l_body">
+    <div class='container clearfix'>
+        <div class='l_main'>
+            
+	
+    <script>
+        window.subData= { title:'year : 2016.9'}
+    </script>
+
+
+<section class="post-list">
+    
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/09/26/using-bundle-in-empty-asp-net-mvc-project/">
+                
+                    在空ASP.NET MVC网站中使用Bundle
+                
+            </a>
+        </h2>
+        <time>
+            2016-09-26
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/C/">C#</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <h1 id="1-在NuGet管理器中"><a href="#1-在NuGet管理器中" class="headerlink" title="1.在NuGet管理器中"></a>1.在NuGet管理器中</h1><p>添加包 <strong>Microsoft.AspNet.Web.Optimization</strong></p>
+<h1 id="2-在Global-asax中"><a href="#2-在Global-asax中" class="headerlink" title="2.在Global.asax中"></a>2.在Global.asax中</h1><p>using System.Web.Optimization;</p>
+<p>并在protected void Application_Start()方法中添加语句</p>
+<p>BundleConfig.RegisterBundles(BundleTable.Bundles);</p>
+<h1 id="3-在Views文件夹下的Web-config中"><a href="#3-在Views文件夹下的Web-config中" class="headerlink" title=" 3.在Views文件夹下的Web.config中"></a> 3.在Views文件夹下的Web.config中</h1><p>在configuration节点的system.web.webPages.razor节点的pages pageBaseType=”System.Web.Mvc.WebViewPage”节点的namespaces节点添加</p>
+<add namespace="System.Web.Optimization">
+
+<h1 id="4-在App-Start文件夹下创建类BundleConfig-cs"><a href="#4-在App-Start文件夹下创建类BundleConfig-cs" class="headerlink" title=" 4.在App_Start文件夹下创建类BundleConfig.cs"></a> 4.在App_Start文件夹下创建类BundleConfig.cs</h1><p>using System.Web;<br>using System.Web.Optimization;</p>
+<p>namespace ProjectName<br>{<br>    public class BundleConfig<br>    {<br>        // 有关绑定的详细信息，请访问 <a href="http://go.microsoft.com/fwlink/?LinkId=301862" target="_blank" rel="noopener">http://go.microsoft.com/fwlink/?LinkId=301862</a><br>        public static void RegisterBundles(BundleCollection bundles)<br>        {<br>            bundles.Add(new ScriptBundle(“~/bundles/jquery”).Include(<br>                        “~/Scripts/jquery-{version}.js”));</p>
+<pre><code>        bundles.Add(new ScriptBundle(&quot;~/bundles/jqueryval&quot;).Include(
+                    &quot;~/Scripts/jquery.validate*&quot;));
+
+        // 使用要用于开发和学习的 Modernizr 的开发版本。然后，当你做好
+        // 生产准备时，请使用 http://modernizr.com 上的生成工具来仅选择所需的测试。
+        bundles.Add(new ScriptBundle(&quot;~/bundles/modernizr&quot;).Include(
+                    &quot;~/Scripts/modernizr-*&quot;));
+
+        bundles.Add(new ScriptBundle(&quot;~/bundles/bootstrap&quot;).Include(
+                  &quot;~/Scripts/bootstrap.js&quot;,
+                  &quot;~/Scripts/respond.js&quot;));
+
+        bundles.Add(new StyleBundle(&quot;~/Content/css&quot;).Include(
+                  &quot;~/Content/bootstrap.css&quot;,
+                  &quot;~/Content/site.css&quot;));
+    }
+}
+</code></pre><p>}</p>
+<h1 id="5-在视图中引用"><a href="#5-在视图中引用" class="headerlink" title=" 5.在视图中引用"></a> 5.在视图中引用</h1><p>@Styles.Render(“~/Content/css”)<br>@Scripts.Render(“~/bundles/modernizr”)<br>@Scripts.Render(“~/bundles/jquery”)<br>@Scripts.Render(“~/bundles/bootstrap”)</p>
+</add>
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/09/08/asp-net-mvc-roles/">
+                
+                    ASP.NET MVC实现灵活的角色控制功能
+                
+            </a>
+        </h2>
+        <time>
+            2016-09-08
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/C/">C#</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>采用ASP.NET MVC+Entity Framework</p>
+<h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><p>public class User<br>    {<br>        public string Username { get; set; }<br>        public string Password { get; set; }<br>        public virtual Power Power { get; set; }<br>    }</p>
+<p> public  class Power<br>    {<br>        public bool P_Admin { get; set; }<br>        public bool P_Event { get; set; }<br>        //此处可添加更多权限<br>        //重写tostring方法返回拥有的权限<br>        public override string ToString()<br>        {<br>            Type type = this.GetType();<br>            System.Reflection.PropertyInfo[] ps = type.GetProperties();<br>            String roles=””;<br>            foreach (PropertyInfo i in ps)<br>            {<br>                if (i.PropertyType == typeof(bool))//只获取bool类型的属性<br>                {<br>                    var obj = i.GetValue(this, null);<br>                    if ((bool)obj)<br>                    {<br>                        roles += i.Name+”,”;//值为true的属性加入到权限中以逗号分隔<br>                    }<br>                }<br>            }<br>            roles=roles.Substring(0, roles.Length - 1);<br>            return roles;<br>        }</p>
+<pre><code>}
+</code></pre><h1 id="View"><a href="#View" class="headerlink" title=" View"></a> View</h1><p>@model  ProjectName.Models.User<br>@{<br>    ViewBag.Title = “login”;<br>}</p>
+<div class="row clearfix"><br>    <div class="col-md-4 column"><br>    </div><br>    <div class="col-md-4 column"><br>        <h2>登陆</h2><br>        @Html.ValidationMessage(“CredentialError”, new { style = “color:red;” })<br>        @using (Html.BeginForm(“DoLogin”, “Home”, FormMethod.Post, new { @class = “” }))<br>            {<br><br>            @Html.TextBoxFor(x =&gt; x.Username, new { placeholder = “用户名”, @class = “form-control” })<br>            @Html.ValidationMessageFor(x =&gt; x.Username)<br>            <br><br>            @Html.PasswordFor(x =&gt; x.Password, new { placeholder = “密码”, @class = “form-control” })<br>            <br><br>                <input type="submit" class="btn btn-primary" name="BtnSubmi" value="登陆"><br>        }<br>    </div><br>    <div class="col-md-4 column"><br>    </div><br></div>
+
+<h1 id="Controllers"><a href="#Controllers" class="headerlink" title=" Controllers"></a> Controllers</h1><p>public class HomeController : Controller<br>    {<br>        private Modeldb db = new Modeldb();<br>        // GET: Home<br>        public ActionResult Index()<br>        {<br>            return View();<br>        }</p>
+<pre><code>    public ActionResult Login()
+    {
+        return View();
+    }
+
+    \[HttpPost\]
+    public ActionResult DoLogin(User u)
+    {
+        var user = db.User.Where(a =&gt; a.Username == u.Userame).Select(a =&gt; a);
+
+        if (user.Count() &gt; 0 &amp;&amp; user.First().Password== u.Password)
+        {
+
+
+            FormsAuthenticationTicket ticket = new FormsAuthenticationTicket
+                (
+                    1,
+                    user.First().Username,
+                    DateTime.Now,
+                    DateTime.Now.AddMinutes(20),
+                    true,
+                    user.First().Power.ToString()
+                );
+            var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, FormsAuthentication.Encrypt(ticket));
+            cookie.HttpOnly = true;
+            HttpContext.Response.Cookies.Add(cookie);
+            return RedirectToAction(&quot;Index&quot;, &quot;Admin&quot;);
+        }
+        else
+        {
+            ModelState.AddModelError(&quot;CredentialError&quot;, &quot;用户名或密码不正确&quot;);
+            return View(&quot;Login&quot;, u);
+        }
+
+    }
+
+    public ActionResult Logout()
+    {
+        FormsAuthentication.SignOut();
+        return RedirectToAction(&quot;Login&quot;);
+    }
+}
+</code></pre><h1 id="自定义RoleProvider"><a href="#自定义RoleProvider" class="headerlink" title="自定义RoleProvider"></a>自定义RoleProvider</h1><p>继承RoleProvider只需给出GetRolesForUser的具体实现即可</p>
+<p>namespace ProjectName.utils<br>{<br>    public class CustomRoleProvider: RoleProvider<br>    {<br>        public override string ApplicationName<br>        {<br>            get<br>            {<br>                throw new NotImplementedException();<br>            }</p>
+<pre><code>        set
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public override void AddUsersToRoles(string\[\] usernames, string\[\] roleNames)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void CreateRole(string roleName)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override bool DeleteRole(string roleName, bool throwOnPopulatedRole)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override string\[\] FindUsersInRole(string roleName, string usernameToMatch)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override string\[\] GetAllRoles()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override string\[\] GetRolesForUser(string username)
+    {
+        var cookie = HttpContext.Current.Request.Cookies\[FormsAuthentication.FormsCookieName\];
+        var ticket = FormsAuthentication.Decrypt(cookie.Value);
+        string role = ticket.UserData;
+        return role.Split(&apos;,&apos;);
+    }
+
+    public override string\[\] GetUsersInRole(string roleName)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override bool IsUserInRole(string username, string roleName)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void RemoveUsersFromRoles(string\[\] usernames, string\[\] roleNames)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override bool RoleExists(string roleName)
+    {
+        throw new NotImplementedException();
+    }
+}
+</code></pre><p>}</p>
+<h1 id="配置Web-config"><a href="#配置Web-config" class="headerlink" title="配置Web.config"></a>配置Web.config</h1><p>&lt;system.web&gt;<br>    <compilation debug="true" targetframework="4.5"><br>    <httpruntime targetframework="4.5"><br>    <authentication mode="Forms"><br>      <forms loginurl="~/Home/Login"></forms><br>    </authentication><br>    <rolemanager enabled="true" defaultprovider="CustomRoleProvid"><br>      <providers><br>        <clear><br>        <add name="CustomRoleProvid" type="ProjectName.utils.CustomRoleProvider"><br>      </add></clear></providers><br>    </rolemanager><br>  &lt;/system.web&gt;</httpruntime></compilation></p>
+<p>使用方式 为相应的Controller或ActionResult添加过滤器 允许匿名访问：[AllowAnonymous] 登陆访问：[Authorize] 限制权限访问：[Authorize(Roles =”Admin”)]</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/09/04/asp-net-mvc-crud-simple/">
+                
+                    ASP.NET MVC 创建最简单的CRUD程序
+                
+            </a>
+        </h2>
+        <time>
+            2016-09-04
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/C/">C#</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><h2 id="User-cs"><a href="#User-cs" class="headerlink" title="User.cs"></a>User.cs</h2><p>[Table(“User”)]<br>    public partial class User<br>    {<br>        [Key]<br>        public int UID { get; set; }</p>
+<pre><code>    \[Required\]
+    \[StringLength(10)\]
+    public string username { get; set; }
+
+    \[Required\]
+    \[StringLength(10)\]
+    public string password { get; set; }
+}
+</code></pre><h2 id="ModelUser-cs"><a href="#ModelUser-cs" class="headerlink" title="ModelUser.cs"></a>ModelUser.cs</h2><p>public partial class ModelUser : DbContext<br>    {<br>        public ModelUser()<br>            : base(“name=ModelUser”)//参数为Web.config中连接字符串的标识<br>        {<br>        }</p>
+<pre><code>    public virtual DbSet&lt;User&gt; User { get; set; }
+
+    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity&lt;User&gt;()
+            .Property(e =&gt; e.username)
+            .IsFixedLength();
+
+        modelBuilder.Entity&lt;User&gt;()
+            .Property(e =&gt; e.password)
+            .IsFixedLength();
+    }
+}
+</code></pre><h1 id="View"><a href="#View" class="headerlink" title="View"></a>View</h1><h2 id="Index-cshtml"><a href="#Index-cshtml" class="headerlink" title="Index.cshtml"></a>Index.cshtml</h2><p>@model IEnumerable&lt;UsersCRUD.Models.User&gt;</p>
+<p>@{<br>    ViewBag.Title = “Index”;<br>}</p>
+<h2>Index</h2>
+
+<p><br>    @Html.ActionLink(“Create New”, “Create”)<br></p><br><table class="table"><br>    <tr><br>        <th><br>            @Html.DisplayNameFor(model =&gt; model.username)<br>        </th><br>        <th><br>            @Html.DisplayNameFor(model =&gt; model.password)<br>        </th><br>        <th></th><br>    </tr><br><br>@foreach (var item in Model) {<br>    <tr><br>        <td><br>            @Html.DisplayFor(modelItem =&gt; item.username)<br>        </td><br>        <td><br>            @Html.DisplayFor(modelItem =&gt; item.password)<br>        </td><br>        <td><br>            @Html.ActionLink(“Edit”, “Edit”, new { id=item.UID }) |<br>            @Html.ActionLink(“Details”, “Details”, new { id=item.UID }) |<br>            @Html.ActionLink(“Delete”, “Delete”, new { id=item.UID })<br>        </td><br>    </tr><br>}<br><br></table><br><br> Create.cshtml<br>————–<br><br>@model UsersCRUD.Models.User<br><br>@{<br>    ViewBag.Title = “Create”;<br>}<br><br><h2>Create</h2><br><br><br>@using (Html.BeginForm())<br>{<br>    @Html.AntiForgeryToken()<br><br>    <div class="form-horizontal"><br>        <h4>User</h4><br>        <hr><br>        @Html.ValidationSummary(true, “”, new { @class = “text-danger” })<br>        <div class="form-group"><br>            @Html.LabelFor(model =&gt; model.username, htmlAttributes: new { @class = “control-label col-md-2” })<br>            <div class="col-md-10"><br>                @Html.EditorFor(model =&gt; model.username, new { htmlAttributes = new { @class = “form-control” } })<br>                @Html.ValidationMessageFor(model =&gt; model.username, “”, new { @class = “text-danger” })<br>            </div><br>        </div><br><br>        <div class="form-group"><br>            @Html.LabelFor(model =&gt; model.password, htmlAttributes: new { @class = “control-label col-md-2” })<br>            <div class="col-md-10"><br>                @Html.EditorFor(model =&gt; model.password, new { htmlAttributes = new { @class = “form-control” } })<br>                @Html.ValidationMessageFor(model =&gt; model.password, “”, new { @class = “text-danger” })<br>            </div><br>        </div><br><br>        <div class="form-group"><br>            <div class="col-md-offset-2 col-md-10"><br>                <input type="submit" value="Create" class="btn btn-default"><br>            </div><br>        </div><br>    </div><br>}<br><br><div><br>    @Html.ActionLink(“Back to List”, “Index”)<br></div><br><br><script src="~/Scripts/jquery-1.10.2.min.js"></script><br><script src="~/Scripts/jquery.validate.min.js"></script><br><script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script><br><br> Delete.cshtml<br>————–<br><br>@model UsersCRUD.Models.User<br><br>@{<br>    ViewBag.Title = “Delete”;<br>}<br><br><h2>Delete</h2><br><br><h3>Are you sure you want to delete this?</h3><br><div><br>    <h4>User</h4><br>    <hr><br>    <dl class="dl-horizontal"><br>        <dt><br>            @Html.DisplayNameFor(model =&gt; model.username)<br>        </dt><br><br>        <dd><br>            @Html.DisplayFor(model =&gt; model.username)<br>        </dd><br><br>        <dt><br>            @Html.DisplayNameFor(model =&gt; model.password)<br>        </dt><br><br>        <dd><br>            @Html.DisplayFor(model =&gt; model.password)<br>        </dd><br><br>    </dl><br><br>    @using (Html.BeginForm()) {<br>        @Html.AntiForgeryToken()<br><br>        <div class="form-actions no-color"><br>            <input type="submit" value="Delete" class="btn btn-default"> |<br>            @Html.ActionLink(“Back to List”, “Index”)<br>        </div><br>    }<br></div><br><br> Details.cshtml<br>—————<br><br>@model UsersCRUD.Models.User<br><br>@{<br>    ViewBag.Title = “Details”;<br>}<br><br><h2>Details</h2><br><br><div><br>    <h4>User</h4><br>    <hr><br>    <dl class="dl-horizontal"><br>        <dt><br>            @Html.DisplayNameFor(model =&gt; model.username)<br>        </dt><br><br>        <dd><br>            @Html.DisplayFor(model =&gt; model.username)<br>        </dd><br><br>        <dt><br>            @Html.DisplayNameFor(model =&gt; model.password)<br>        </dt><br><br>        <dd><br>            @Html.DisplayFor(model =&gt; model.password)<br>        </dd><br><br>    </dl><br></div><br><p><br>    @Html.ActionLink(“Edit”, “Edit”, new { id = Model.UID }) |<br>    @Html.ActionLink(“Back to List”, “Index”)<br></p>
+
+<h2 id="Edit-cshtml"><a href="#Edit-cshtml" class="headerlink" title=" Edit.cshtml"></a> Edit.cshtml</h2><p>@model UsersCRUD.Models.User</p>
+<p>@{<br>    ViewBag.Title = “Edit”;<br>}</p>
+<h2>Edit</h2>
+
+
+<p>@using (Html.BeginForm())<br>{<br>    @Html.AntiForgeryToken()</p>
+<pre><code>&lt;div class=&quot;form-horizontal&quot;&gt;
+    &lt;h4&gt;User&lt;/h4&gt;
+    &lt;hr /&gt;
+    @Html.ValidationSummary(true, &quot;&quot;, new { @class = &quot;text-danger&quot; })
+    @Html.HiddenFor(model =&gt; model.UID)
+
+    &lt;div class=&quot;form-group&quot;&gt;
+        @Html.LabelFor(model =&gt; model.username, htmlAttributes: new { @class = &quot;control-label col-md-2&quot; })
+        &lt;div class=&quot;col-md-10&quot;&gt;
+            @Html.EditorFor(model =&gt; model.username, new { htmlAttributes = new { @class = &quot;form-control&quot; } })
+            @Html.ValidationMessageFor(model =&gt; model.username, &quot;&quot;, new { @class = &quot;text-danger&quot; })
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;form-group&quot;&gt;
+        @Html.LabelFor(model =&gt; model.password, htmlAttributes: new { @class = &quot;control-label col-md-2&quot; })
+        &lt;div class=&quot;col-md-10&quot;&gt;
+            @Html.EditorFor(model =&gt; model.password, new { htmlAttributes = new { @class = &quot;form-control&quot; } })
+            @Html.ValidationMessageFor(model =&gt; model.password, &quot;&quot;, new { @class = &quot;text-danger&quot; })
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;div class=&quot;col-md-offset-2 col-md-10&quot;&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Save&quot; class=&quot;btn btn-default&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>}</p>
+<div><br>    @Html.ActionLink(“Back to List”, “Index”)<br></div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<h1 id="Conroller"><a href="#Conroller" class="headerlink" title=" Conroller"></a> Conroller</h1><p>public class UsersController : Controller<br>    {<br>        private ModelUser db = new ModelUser();</p>
+<pre><code>    // GET: Users
+    public ActionResult Index()
+    {
+        return View(db.User.ToList());
+    }
+
+    // GET: Users/Details/5
+    public ActionResult Details(int? id)
+    {
+        if (id == null)
+        {
+            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        }
+        User user = db.User.Find(id);
+        if (user == null)
+        {
+            return HttpNotFound();
+        }
+        return View(user);
+    }
+
+    // GET: Users/Create
+    public ActionResult Create()
+    {
+        return View();
+    }
+
+    // POST: Users/Create
+    // 为了防止“过多发布”攻击，请启用要绑定到的特定属性，有关 
+    // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
+    \[HttpPost\]
+    \[ValidateAntiForgeryToken\]
+    public ActionResult Create(\[Bind(Include = &quot;UID,username,password&quot;)\] User user)
+    {
+        if (ModelState.IsValid)
+        {
+            db.User.Add(user);
+            db.SaveChanges();
+            return RedirectToAction(&quot;Index&quot;);
+        }
+
+        return View(user);
+    }
+
+    // GET: Users/Edit/5
+    public ActionResult Edit(int? id)
+    {
+        if (id == null)
+        {
+            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        }
+        User user = db.User.Find(id);
+        if (user == null)
+        {
+            return HttpNotFound();
+        }
+        return View(user);
+    }
+
+    // POST: Users/Edit/5
+    // 为了防止“过多发布”攻击，请启用要绑定到的特定属性，有关 
+    // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
+    \[HttpPost\]
+    \[ValidateAntiForgeryToken\]
+    public ActionResult Edit(\[Bind(Include = &quot;UID,username,password&quot;)\] User user)
+    {
+        if (ModelState.IsValid)
+        {
+            db.Entry(user).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction(&quot;Index&quot;);
+        }
+        return View(user);
+    }
+
+    // GET: Users/Delete/5
+    public ActionResult Delete(int? id)
+    {
+        if (id == null)
+        {
+            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        }
+        User user = db.User.Find(id);
+        if (user == null)
+        {
+            return HttpNotFound();
+        }
+        return View(user);
+    }
+
+    // POST: Users/Delete/5
+    \[HttpPost, ActionName(&quot;Delete&quot;)\]
+    \[ValidateAntiForgeryToken\]
+    public ActionResult DeleteConfirmed(int id)
+    {
+        User user = db.User.Find(id);
+        db.User.Remove(user);
+        db.SaveChanges();
+        return RedirectToAction(&quot;Index&quot;);
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        if (disposing)
+        {
+            db.Dispose();
+        }
+        base.Dispose(disposing);
+    }
+}
+</code></pre>
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/09/02/asp-net-mvc-crud/">
+                
+                    ASP.NET MVC 通过向导创建CRUD程序
+                
+            </a>
+        </h2>
+        <time>
+            2016-09-02
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/C/">C#</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>1.首先创建好数据库和表 2.打开Visual Studio(以2015Update3版本为例) 3.创建ASP.NET Web应用程序 4.选择Empty模板并勾选MVC引用 5.在Models文件夹添加项 6.选择数据分组中的ASP.NET实体数据模型 7.选择来自数据库的Code First 8.配置好数据连接，<strong>一定要勾选将Web.Config中的设置另存为</strong> 9.勾选需要的表并完成向导 10.<strong>非常重要：生成解决方案</strong> 11.在Controllers文件夹上添加新搭建基架的项目 12.选择包含视图的MVC5控制器（使用Entity Framework） 13.选择相应模型类与数据上下文类并选择添加 至此，一个包含CRUD操作的ASP.NET MVC应用程序已经创建完成</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/09/02/asp-net-mvc-authwithrole/">
+                
+                    ASP.NET MVC有用户角色功能的登陆验证
+                
+            </a>
+        </h2>
+        <time>
+            2016-09-02
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/C/">C#</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><p>public enum UserStatus<br>    {<br>        AuthenticatedAdmin,<br>        AuthentucatedUser,<br>        NonAuthenticatedUser<br>    }</p>
+<p>public class UserDetails<br>    {<br>        [StringLength(7, MinimumLength = 2, ErrorMessage = “UserName length should be between 2 and 7”)]<br>        public string UserName { get; set; }<br>        public string Password { get; set; }<br>    }</p>
+<p>public class UserBusinessLayer<br>        {<br>            public UserStatus GetUserValidity(UserDetails u)<br>            {<br>                if (u.UserName == “Admin” &amp;&amp; u.Password == “Admin”)<br>                {<br>                    return UserStatus.AuthenticatedAdmin;<br>                }<br>                else if (u.UserName == “Sukesh” &amp;&amp; u.Password == “Sukesh”)<br>                {<br>                    return UserStatus.AuthentucatedUser;<br>                }<br>                else<br>                {<br>                    return UserStatus.NonAuthenticatedUser;<br>                }<br>            }<br>        }</p>
+<h1 id="View"><a href="#View" class="headerlink" title=" View"></a> View</h1><p>@model ProjectName.Models.UserDetails<br>@Html.ValidationMessage(“CredentialError”, new {style=”color:red;” })<br>        @using (Html.BeginForm(“DoLogin”, “Authentication”, FormMethod.Post))<br>        {<br>            @Html.LabelFor(c=&gt;c.UserName)<br>            @Html.TextBoxFor(x=&gt;x.UserName)<br>            @Html.ValidationMessageFor(x=&gt;x.UserName)<br>            <br><br>            @Html.LabelFor(c =&gt; c.Password)<br>            @Html.PasswordFor(x =&gt; x.Password)<br>            <br></p>
+<pre><code>    &lt;input type=&quot;submit&quot; name=&quot;BtnSubmi&quot; value=&quot;Login&quot; /&gt;
+}
+</code></pre><h1 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h1><p>[AllowAnonymous]<br>   public class AuthenticationController : Controller<br>   {</p>
+<pre><code>public ActionResult Logout()
+{
+    FormsAuthentication.SignOut();
+    return RedirectToAction(&quot;Login&quot;);
+}
+</code></pre><p>   // GET: Authentication<br>       public ActionResult Login()<br>       {<br>           return View();<br>       }</p>
+<pre><code>\[HttpPost\]
+public ActionResult DoLogin(UserDetails u)
+{
+    if (ModelState.IsValid)
+    {
+        UserBusinessLayer bal = new UserBusinessLayer();
+        UserStatus status = bal.GetUserValidity(u);
+        bool IsAdmin = false;
+        if (status==UserStatus.AuthenticatedAdmin)
+        {
+            IsAdmin = true;
+        }
+        else if (status == UserStatus.AuthentucatedUser)
+        {
+            IsAdmin = false;
+        }
+        else
+        {
+            ModelState.AddModelError(&quot;CredentialError&quot;, &quot;Invalid Username or Password&quot;);
+            return View(&quot;Login&quot;);
+        }
+        FormsAuthentication.SetAuthCookie(u.UserName, false);
+        Session\[&quot;IsAdmin&quot;\] = IsAdmin;
+        return RedirectToAction(&quot;Index&quot;, &quot;Employee&quot;);
+    }
+    else
+    {
+        return View(&quot;Login&quot;);
+    }
+}
+</code></pre><p>   }</p>
+<h1 id="Filter"><a href="#Filter" class="headerlink" title=" Filter"></a> Filter</h1><p>public class AdminFilter:ActionFilterAttribute<br>    {<br>        public override void OnActionExecuting(ActionExecutingContext filterContext)<br>        {<br>            if (!Convert.ToBoolean(filterContext.HttpContext.Session[“IsAdmin”]))<br>            {<br>                filterContext.Result = new ContentResult()<br>                {<br>                    Content=”Unauthorized to access specified resource.”<br>                };<br>            }<br>        }<br>    }</p>
+<h1 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h1><p>为相应的Controller或ActionResult添加过滤器 允许匿名访问：[AllowAnonymous] 登陆访问：[Authorize] 管理员访问：[AdminFilter]</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/09/02/asp-net-mvc-verification/">
+                
+                    ASP.NET MVC 用户登陆验证模块
+                
+            </a>
+        </h2>
+        <time>
+            2016-09-02
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/C/">C#</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><p>public class UserDetails<br>    {<br>        public string UserName { get; set; }<br>        public string Password { get; set; }<br>    }</p>
+<p>public class UserDetailBusinessLayer<br>    {<br>        public bool IsValidUser(UserDetails u)<br>        {<br>            if (u.UserName == “Admin” &amp;&amp; u.Password == “Admin”)<br>            {<br>                return true;<br>            }<br>            else<br>            {<br>                return false;<br>            }<br>        }<br>    }</p>
+<h1 id="View"><a href="#View" class="headerlink" title=" View"></a> View</h1><p>@model ProjectName.Models.UserDetails</p>
+<p></p><h4>登陆</h4><br>@Html.ValidationMessage(“CredentialError”, new { style = “color:red;” })<br>@using (Html.BeginForm(“DoLogin”, “Authentication”, FormMethod.Post)) {<p></p>
+<div class="form-group"><br> <label for="Username">用户</label><input type="text" placeholder="请输入用户名" class="form-control" id="UserName" name="UserName"><br></div>
+
+<div class="form-group"><br> <label for="Password">密码</label><input type="password" placeholder="请输入密码" class="form-control" id="Password" name="Password"><br></div>
+
+<p><div class="form-group"><br> <input type="submit" class="btn btn-primary" name="BtnSubmit" value="登陆"><br></div><br>}</p>
+<h1 id="Controller"><a href="#Controller" class="headerlink" title=" Controller"></a> Controller</h1><p>public class AuthenticationController : Controller<br>    {<br>        // GET: Authentication<br>        public ActionResult Login()<br>        {<br>            return View();<br>        }</p>
+<pre><code>    \[HttpPost\]
+    public ActionResult DoLogin(UserDetails u)
+    {
+        //初始化用户信息业务层
+        var bal = new UserDetailBusinessLayer();
+        if (bal.IsValidUser(u))
+        {
+            FormsAuthentication.SetAuthCookie(u.UserName, false);
+            return RedirectToAction(&quot;Index&quot;, &quot;Admin&quot;);
+        }
+        else
+        {
+            ModelState.AddModelError(&quot;CredentialError&quot;, &quot;用户名或密码输入错误&quot;);
+            return View(&quot;Login&quot;);
+        }
+    }
+
+    public ActionResult Logout()
+    {
+        FormsAuthentication.SignOut();
+        return RedirectToAction(&quot;Login&quot;);
+    }
+}
+</code></pre>
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+</section>
+
+
+
+
+
+        </div>
+        <aside class='l_side'>
+            
+    
+    
+        <section class='m_widget categories'>
+    <div class='header'><i class="fa fa-sitemap fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;分类</div>
+    <div class='content'>
+        
+            <ul class="entry">
+                
+                    <li><a class="flat-box" href="/categories/C/"><div class='name'>C#</div><div class='badge'>11</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/extmail/"><div class='name'>extmail</div><div class='badge'>5</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/前端/"><div class='name'>前端</div><div class='badge'>2</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/服务器与运维/"><div class='name'>服务器与运维</div><div class='badge'>6</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/脚本/"><div class='name'>脚本</div><div class='badge'>2</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/运维/"><div class='name'>运维</div><div class='badge'>8</div></a></li>
+                
+            </ul>
+        
+    </div>
+</section>
+
+    
+    
+        
+    <section class='m_widget tagcloud'>
+        <div class="header"><i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;标签</div>
+        <div class='content'>
+            <a href="/tags/ASP-NET/" style="font-size: 14px; color: #999">ASP.NET</a> <a href="/tags/MVC/" style="font-size: 14px; color: #999">MVC</a> <a href="/tags/Ueditor/" style="font-size: 24px; color: #555">Ueditor</a> <a href="/tags/extmail/" style="font-size: 14px; color: #999">extmail</a> <a href="/tags/html5/" style="font-size: 14px; color: #999">html5</a> <a href="/tags/ie8/" style="font-size: 14px; color: #999">ie8</a> <a href="/tags/video/" style="font-size: 14px; color: #999">video</a> <a href="/tags/中文/" style="font-size: 14px; color: #999">中文</a> <a href="/tags/乱码/" style="font-size: 14px; color: #999">乱码</a> <a href="/tags/在IE8浏览器中播放video标签的视频/" style="font-size: 14px; color: #999">在IE8浏览器中播放video标签的视频</a> <a href="/tags/附件/" style="font-size: 14px; color: #999">附件</a>
+        </div>
+    </section>
+
+
+    
+    
+        <section class='m_widget music'>
+    <div class='header'><i class="fa fa-headphones fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;音乐</div>
+    <div class='content'>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=450 src="//music.163.com/outchain/player?type=0&id=112701651&auto=0&height=450"></iframe>
+    </div>
+</section>
+
+    
+    
+        <section class='m_widget links'>
+    <div class='header'><i class="fa fa-handshake-o fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;友链</div>
+    <div class='content'>
+        <ul class="entry" id="links">
+            
+                <li><a class="flat-box" target="_blank" rel="external nofollow noopener noreferrer" href="https://xaoxuu.com">
+                    <div class='name'>
+                        <i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i>
+                        &nbsp;&nbsp;xaoxuu
+                    </div>
+                </a></li>
+            
+            
+
+        </ul>
+
+    </div>
+</section>
+
+    
+    
+        
+
+    
+
+
+        </aside>
+        <script>setLoadingBarProgress(60);</script>
+    </div>
+    </div>
+    <footer id="footer" class="clearfix">
+    
+        <div class="social-wrapper">
+          
+              
+                  <a href="mailto:finaldusk@live.cn" class="social fa fa-envelope flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+                  <a href="https://github.com/finaldusk" class="social fa fa-github flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+                  <a href="atom" class="social fa fa-rss flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+        </div>
+    
+    <br>
+    <div>博客内容遵循 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="licenses">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></div>
+    <div>本站使用 <a href="https://github.com/xaoxuu/hexo-theme-material-x" target="_blank" class="codename">Material X</a> 作为主题，
+		总访问量为 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+    </div>
+</footer>
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+    <script>setLoadingBarProgress(80);</script>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<!-- 访问统计 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script src="/js/jquery.fitvids.js"></script>
+
+    <script>
+        var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+        var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+        var ALGOLIA_API_KEY = "";
+        var ALGOLIA_APP_ID = "";
+        var ALGOLIA_INDEX_NAME = "";
+        var AZURE_SERVICE_NAME = "";
+        var AZURE_INDEX_NAME = "";
+        var AZURE_QUERY_KEY = "";
+        var BAIDU_API_ID = "";
+        var SEARCH_SERVICE = "hexo" || "hexo";
+        var ROOT = "/"||"/";
+        if(!ROOT.endsWith('/'))ROOT += '/';
+    </script>
+
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+
+    <script>setLoadingBarProgress(100);</script>
+</body>

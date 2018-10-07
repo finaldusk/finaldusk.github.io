@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Archives: 2015 | 王鑫磊的记事本</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/">
+  <link rel="alternate" href="/atom.xml" title="王鑫磊的记事本">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="shortcut icon" href="" />
+  <link rel="icon" href="" />
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+    <script>setLoadingBarProgress(20)</script>
+    <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				<!-- <i class="fa fa-home"></i> -->
+				王鑫磊的记事本
+			</a>
+
+				<div class='menu'>
+					<ul class='h-list'>
+                        
+    						
+    							<li>
+    								<a class='nav-home flat-box' href='/'>
+    									<i class='fa fa-home fa-'></i>&nbsp;主页
+    								</a>
+    							</li>
+    						
+    							<li>
+    								<a class='nav-search flat-box' href='https://search.wangxinlei.cn'>
+    									<i class='fa fa-search fa-'></i>&nbsp;搜索导航
+    								</a>
+    							</li>
+    						
+    							<li>
+    								<a class='nav-archives flat-box' href='/archives'>
+    									<i class='fa fa-archive fa-'></i>&nbsp;归档
+    								</a>
+    							</li>
+    						
+        			 
+					</ul>
+					<div class='underline'></div>
+				</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon"><i class="fa fa-search fa-fw"></i></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fa fa-search fa-fw" href='javascript:void(0)'></span></a></li>
+				
+				<li class='s-menu'><a class="fa fa-navicon fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				xaoxuu
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="fa fa-comments fa-fw flat-box" href='javascript:void(0)'></a></li>
+				<li class='s-top'><a class="fa fa-arrow-up fa-fw flat-box" href='javascript:void(0)'></a></li>
+				<li class='s-toc'><a class="fa fa-list-ul fa-fw flat-box" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+        <div class="header">王鑫磊的记事本</div>
+		<nav>
+            <ul>
+                
+                    
+                        <li>
+                            <a class='nav-home flat-box nav flat-box' href='/'><i class='fa fa-home fa-fw'></i>&nbsp;主页</a>
+                        </li>
+                    
+                        <li>
+                            <a class='nav-search flat-box nav flat-box' href='https://search.wangxinlei.cn'><i class='fa fa-search fa-fw'></i>&nbsp;搜索导航</a>
+                        </li>
+                    
+                        <li>
+                            <a class='nav-archives flat-box nav flat-box' href='/archives'><i class='fa fa-archive fa-fw'></i>&nbsp;归档</a>
+                        </li>
+                    
+             
+            </ul>
+		</nav>
+	</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+    <div class="l_body">
+    <div class='container clearfix'>
+        <div class='l_main'>
+            
+	
+    <script>
+        window.subData= { title:'year : 2015'}
+    </script>
+
+
+<section class="post-list">
+    
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2015/12/29/auto-au3/">
+                
+                    使用AU3编写的基于控件名称的抢课脚本
+                
+            </a>
+        </h2>
+        <time>
+            2015-12-29
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/脚本/">脚本</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>使用按键精灵等软件编写的脚本基于坐标控制 当窗口移动或分辨率发生变化的时候脚本非但不会起作用还可能发生莫名其妙的情况。 我写的这个脚本基于网页中控件的名称来进行选课，不会发生因坐标移动而无法选择的情况，欢迎探讨~</p>
+<p>#include &lt;IE.au3&gt;</p>
+<p>while true<br>WinActivate(“现代教学管理信息系统 - Internet Explorer”);激活窗口<br>WinWaitActive(“现代教学管理信息系统 - Internet Explorer”);等待窗口被激活<br>Local $oIE =_IEAttach(“现代教学管理信息系统”);选定标题为”现代教学管理信息系统”的IE窗口<br>Local $oForm = _IEFormGetObjByName($oIE, “xsxjs_form”);表单名为xsxjs_form<br>_IEAction($oForm, “focus”)<br>_IEFormElementRadioSelect($oForm, “(2015-2016-2)-16209670-160042-1”, “xkkh”, 1, “byValue”);”(2015-2016-2)-16209670-160042-1”为课程ID<br>_IEFormElementRadioSelect($oForm, “1”, “RadioButtonList1”, 1, “byValue”);预定教材<br>Local $oSubmit = _IEGetObjByName($oIE, “btnSelect”)<br>_IEAction($oSubmit, “click”)<br>WinWaitActive(“来自网页的消息”);等待窗口被激活<br>Send(“{ENTER}”)<br>WEnd</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2015/12/26/installsshdonub/">
+                
+                    为Ubuntu安装SSHD服务在终端中安装deb软件包
+                
+            </a>
+        </h2>
+        <time>
+            2015-12-26
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/服务器与运维/">服务器与运维</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>首先配置好网络环境，更新yum源。 然后执行：</p>
+<p>sudo apt-get install openssh-server</p>
+<p>完成了…… 打开SSH客户端连接到Ubuntu 下载想要安装的deb包</p>
+<p>sudo dpkg -i ***.deb</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2015/12/26/mconctos/">
+                
+                    在CentOS上搭建Minecraft服务器
+                
+            </a>
+        </h2>
+        <time>
+            2015-12-26
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/服务器与运维/">服务器与运维</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>首先你需要下载jdk或jre,如下载64位rpm包：</p>
+<p>wget <a href="http://download.oracle.com/otn-pub/java/jdk/8u20-b26/jdk-8u20-linux-x64.rpm" target="_blank" rel="noopener">http://download.oracle.com/otn-pub/java/jdk/8u20-b26/jdk-8u20-linux-x64.rpm</a></p>
+<p>安装java的rpm包</p>
+<p>rpm -ivh jdk-8u20-linux-x64.rpm</p>
+<p>配置环境变量</p>
+<p>vi /etc/profile</p>
+<p>在文件末尾添加如下内容</p>
+<p>export JAVA_HOME=/usr/java/jdk1.8.0_20<br>export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar<br>export PATH=$PATH:$JAVA_HOME/bin</p>
+<p>重新启动使设置生效。 将Minecraft服务端jar包拷贝到如/home/minecraft/ 在该文件夹下建立Shell脚本</p>
+<p>java -Xincgc -Xms512M -Xmx768M -jar minecraft_server.1.8.8.jar</p>
+<p>最小内存和最大内存可根据自己实际情况进行修改。   安装Screen模拟终端</p>
+<p>yum install screen</p>
+<p>创建一个虚拟终端</p>
+<p>screen -S minecraft</p>
+<p>执行Shell脚本，在MC中选择多人游戏键入服务器IP地址，与小伙伴们愉快的玩耍吧！ 下次需要回到该终端时执行</p>
+<p>screen -R minecraft</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2015/12/12/mutidn/">
+                
+                    让一个主机绑定多个网站（XAMPP）
+                
+            </a>
+        </h2>
+        <time>
+            2015-12-12
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/服务器与运维/">服务器与运维</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>例如有域名A.com和B.com 但是只有一个独立IP主机1.1.1.1； 主机使用Linux操作系统安装了Xampp集成环境。 <strong>方法1（配置httpd.conf）：</strong> 操作步骤： 编辑 <strong>/opt/lampp/etc/httpd.conf</strong></p>
+<blockquote>
+<p>去掉 <strong> Include etc/extra/httpd-vhosts.conf</strong> 前面的 <strong>#</strong></p>
+</blockquote>
+<p>编辑 <strong> /opt/lampp/etc/extra/httpd-vhosts.conf</strong></p>
+<blockquote>
+<p>为每条域名按照如下模板添加记录 <virtualhost *:80=""> ServerAdmin <a href="mailto:admin@A.com" target="_blank" rel="noopener">admin@A.com</a> DocumentRoot “/opt/lampp/htdocs/A/“ ServerName A.com ServerAlias *.A.com ErrorLog “logs/dummy-A.com-error_log” CustomLog “logs/dummy-A.com-access_log” common </virtualhost></p>
+</blockquote>
+<p>编辑  <strong>/opt/lampp/apache2/conf/httpd.conf</strong></p>
+<blockquote>
+<p>增加以下信息 RewriteEngine on RewriteMap lowercase int:tolower RewriteMap vhost txt:<strong>/opt/lampp/apache2/conf/vhost.map</strong> RewriteCond ${lowercase:%{SERVER_NAME}} ^(.+)$ RewriteCond ${vhost:%1} ^(/.<em>)$ RewriteRule ^/(.</em>)$ %1/$1</p>
+</blockquote>
+<p>其中 <strong>/opt/lampp/apache2/conf/vhost.map</strong> 为新建二级域名的配置文件路径   <strong>编辑/opt/lampp/apache2/conf/vhost.map</strong></p>
+<blockquote>
+<p><a href="http://www.A.com" target="_blank" rel="noopener">www.A.com</a>  /opt/lampp/htdocs/A <a href="http://www.B.com" target="_blank" rel="noopener">www.B.com</a>  /opt/lampp/htdocs/B</p>
+</blockquote>
+<p><strong>在DNS服务器绑定好域名，重启apache服务器（编辑vhost.map文件无需重启）</strong>   <strong>方法2（配置.htaccess）：</strong> 此方法适用于无法更改httpd.conf的情况如使用虚拟主机 首先将你的Web默认文件夹（如htdocs）整理一下 将目录名设置为二级域名的名称 如：创建<a href="http://www.A.com需在目录下创建一个名为www的文件夹" target="_blank" rel="noopener">www.A.com需在目录下创建一个名为www的文件夹</a></p>
+<blockquote>
+<p>RewriteEngine on RewriteCond %{HTTP_HOST} ^A.com$ RewriteCond %{REQUEST_URI} !^/www/ RewriteCond %{REQUEST_FILENAME} !-f RewriteCond %{REQUEST_FILENAME} !-d RewriteRule ^(.<em>)$ /www/$1 RewriteCond %{HTTP_HOST} ^A.com$ RewriteRule ^(/)?$ www/index.php [L] RewriteCond %{HTTP_HOST} ^<a href="http://www.A.com$" target="_blank" rel="noopener">www.A.com$</a> RewriteCond %{REQUEST_URI} !^/www/ RewriteCond %{REQUEST_FILENAME} !-f RewriteCond %{REQUEST_FILENAME} !-d RewriteRule ^(.</em>)$ /www/$1 RewriteCond %{HTTP_HOST} ^<a href="http://www.A.com$" target="_blank" rel="noopener">www.A.com$</a> RewriteRule ^(/)?$ www/index.php [L] RewriteCond %{HTTP_HOST} ^a.A.com$ RewriteCond %{REQUEST_URI} !^/a/ RewriteCond %{REQUEST_FILENAME} !-f RewriteCond %{REQUEST_FILENAME} !-d RewriteRule ^(.*)$ /a/$1 RewriteCond %{HTTP_HOST} ^a.A.com$ RewriteRule ^(/)?$ a/index.html [L]</p>
+</blockquote>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2015/12/06/setupsyswithouthub/">
+                
+                    教你6步操作不用HUB重装Windows平板操作系统
+                
+            </a>
+        </h2>
+        <time>
+            2015-12-06
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/运维/">运维</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>我在之前的文章提到了499的Windows平板，操作系统有时需要重新安装，官方提供的安装方法需要用到USBHUB然而不是每次装系统身边都能找到HUB的，下面我来介绍一种方法重新安装操作系统而不需要USBHUB。 前提：已按官方介绍的方法处理好优盘并用OTG数据线连接至平板电脑。 从右向左滑一下（Windows10打开通知） <a href="http://www.wangxinlei.cn/wp-content/uploads/2015/12/step1.jpg"><img src="http://www.wangxinlei.cn/wp-content/uploads/2015/12/step1-759x1024.jpg" alt="step1"></a> 选择更改电脑设置（Windows10点击所有设置） <a href="http://www.wangxinlei.cn/wp-content/uploads/2015/12/step2.jpg"><img src="http://www.wangxinlei.cn/wp-content/uploads/2015/12/step2-759x1024.jpg" alt="step2"></a> 选择更新和恢复 <a href="http://www.wangxinlei.cn/wp-content/uploads/2015/12/step3.jpg"><img src="http://www.wangxinlei.cn/wp-content/uploads/2015/12/step3-759x1024.jpg" alt="step3"></a> 选择恢复再点击立即重启 <a href="http://www.wangxinlei.cn/wp-content/uploads/2015/12/step4.jpg"><img src="http://www.wangxinlei.cn/wp-content/uploads/2015/12/step4-759x1024.jpg" alt="step4"></a> 重启后选择使用设备 <a href="http://www.wangxinlei.cn/wp-content/uploads/2015/12/step5.jpg"><img src="http://www.wangxinlei.cn/wp-content/uploads/2015/12/step5-759x1024.jpg" alt="step5"></a> 再选择EFI USB DEVICE <a href="http://www.wangxinlei.cn/wp-content/uploads/2015/12/step6.jpg"><img src="http://www.wangxinlei.cn/wp-content/uploads/2015/12/step6-759x1024.jpg" alt="step6"></a> 现在是不是已经进入操作系统安装界面了~ 注：本方法仅适用于USB启动PE带触屏驱动或USB启动全自动安装的情况下使用。</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2015/11/01/lamp/">
+                
+                    CentOS中简单架设LAMP测试环境
+                
+            </a>
+        </h2>
+        <time>
+            2015-11-01
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/服务器与运维/">服务器与运维</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>在学习使用PHP的过程中 逐个安装各个服务过于繁琐下面介绍一个软件可以实现“一键”搭建LAMP环境。 <strong>安装过程</strong> 1. 安装Linux服务器 最小安装CentOS 后 需要设置开启防火墙的80\443和22端口 #/sbin/iptables -I INPUT -p tcp –dport 80 -j ACCEPT #/sbin/iptables -I INPUT -p tcp –dport 22 -j ACCEPT 然后保存： #/etc/rc.d/init.d/iptables save 2. 利用WinSCP通过Windows远程传送xampp 软件到/home/或在Centos中直接wget软件包 Xampp官方下载地址<a href="https://www.apachefriends.org/download.html" target="_blank" rel="noopener">https://www.apachefriends.org/download.html</a> 3. 安装xampp软件 执行命令 #cd /home/ # chmod 755 xampp-linux-<em>-installer.run # ./xampp-linux-</em>-installer.run   4.为Xampp完善安全性设置 执行命令 #/opt/lampp/lampp security   5.启动LAMP服务 #/opt/lampp/lampp start （更多关于Xampp相关的资料可以参见官方FAQ: <a href="https://www.apachefriends.org/faq_linux.html" target="_blank" rel="noopener">https://www.apachefriends.org/faq_linux.html</a>）</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2015/07/19/v820w/">
+                
+                    昂达V820W使用指南
+                
+            </a>
+        </h2>
+        <time>
+            2015-07-19
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/运维/">运维</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>几个月前在京东以499的价格入了这款平板，8寸，4核atom的CPU，2G内存，存储空间32GB Win8、Android双系统，还是比较值的然而现在已经降价了，而且9寸的现在还赠蓝牙键盘也才499…… 先来说说这款机器的优点：便宜 然后说说这款机器的缺点：没有单独的充电接口、充电较慢、发热严重、电量低于50%屏幕亮度有抖动、Android自带昂达桌面会自动安装垃圾应用…… 这款机器有三个版本： V1 安卓Windows双系统 V2安卓单系统 V3Windows单系统 买国产Windows平板如果有双系统版本且价格近似时建议买双系统版的，因为双系统版可以完美的变为单系统，而单系统版刷双系统会有些缺陷…… 以上为本人个人见解，以下内容来源于如网络： <a href="http://www.ondabbs.cn/thread-58294-1-1.html" target="_blank" rel="noopener">onda V820w原WIN8单系统刷双系统教程 </a> 此贴1L 介绍如何刷装系统 5L介绍安装Win8的方法 6L介绍调整安卓Data分区大小的方法 注：适用于双系统刷单系统后刷回双系统，原双系统刷回双系统不存在教程中提到的缺陷，可以完美刷回双系统并调整分区大小、楼层中的root固件发现问题刷了变砖所以楼主已经把帖子锁定不再提供下载，若要ROOT可使用下面帖子的ROOT工具完成ROOT操作   <a href="http://www.ondabbs.cn/thread-58915-1-1.html" target="_blank" rel="noopener">昂达V820w双系统版安卓一键root工具(android4.4.4)</a>     <a href="http://www.ondabbs.cn/thread-53385-1-3.html" target="_blank" rel="noopener">双系统：安卓与WIN 系统时间不一致的解决方法</a> 新建reg文件导入注册表即可</p>
+<p>Windows Registry Editor Version 5.00</p>
+<p>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation]<br>    “RealTimeIsUniversal”=dword:00000001</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2015/01/18/e5-8d-8e-e4-b8-ba-e8-ae-a4-e8-af-81-e5-9f-b9-e8-ae-ad-e8-b5-84-e6-96-99/">
+                
+                    华为认证培训资料
+                
+            </a>
+        </h2>
+        <time>
+            2015-01-18
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/运维/">运维</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p><a href="http://support.huawei.com/learning/NavigationAction!createNavi?navId=term1000025450&amp;event=loadCertificate&amp;id=Node1000004317&amp;lang=zh" title="点击打开华为HCNA培训认证页面" target="_blank" rel="noopener">HCNA认证</a>主要定位于中小企业网络基本配置操作和设备维护，包括网络基础知识；流行网络的布线结构；网络连接方法；网络的建构；网络故障的排除；TCP/IP网络的建设；网络布线与网络互连实践；华为设备的安装与调试。   <strong>网盘资料（搜集自网络）：</strong>   链接: <a href="http://pan.baidu.com/s/1bnnOKmb%20" target="_blank" rel="noopener">http://pan.baidu.com/s/1bnnOKmb</a> 密码: ofdl   网盘内含有华为官方HCNA培训教材及视频资料，还含有培训机构录制的培训视频，还有题库（慎重使用）。   <strong>在线资料（转自华为企业技术交流社区）</strong> <strong>企业网络在线学习资料（**</strong>免费<strong><strong>资源合集）</strong></strong>——<strong><strong>无需注册，无需登录，访问页面即可播放</strong></strong>——<strong> </strong>2014<strong>**年第57期</strong> ?<strong>获取方式一：只需两步，即可免费在线学习资料！</strong> <strong>步骤一：点击E-Learning课程链接。</strong> <strong><a href="http://support.huawei.com/learning/NavigationAction!createNavi?navId=_16&amp;lang=zh" target="_blank" rel="noopener">http://support.huawei.com/learning/NavigationAction!createNavi?navId=_16&amp;lang=zh</a></strong> <strong>步骤二：先在左侧导航栏选择技术方向，然后在“价格类型”中选择“免费”。</strong> ?<strong>获取方式二：点击链接直接进入**</strong>路由交换<strong><strong>、</strong></strong>WLAN<strong><strong>、</strong></strong>安全<strong>**免费资源。</strong> <strong>1.**</strong>路由交换**</p>
+<p><strong>序号</strong></p>
+<p><strong>课程名称</strong></p>
+<p><strong>课程类别</strong></p>
+<p><strong>课程时长</strong></p>
+<p>1</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000007179" target="_blank" rel="noopener">IP技术通用原理培训(Fast-Track)</a></p>
+<p>技术基础</p>
+<p>4.5</p>
+<p>2</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000007637" target="_blank" rel="noopener">华为VRP快速入门</a></p>
+<p>技术基础</p>
+<p>1</p>
+<p>3</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000004429" target="_blank" rel="noopener">STP原理与配置</a></p>
+<p>技术基础</p>
+<p>0.5</p>
+<p>4</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000007759" target="_blank" rel="noopener">HCNA华为认证网络工程师培训v2.0（免费版）</a></p>
+<p>技术基础</p>
+<p>11</p>
+<p>5</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025197&amp;courseId=Node1000007503" target="_blank" rel="noopener">NE路由器操作与维护培训(Fast-Track)</a></p>
+<p>操作维护</p>
+<p>7</p>
+<p>6</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025197&amp;courseId=Node1000007500" target="_blank" rel="noopener">园区网路由器(NE/AR)操作与维护培训(Fast-Track)</a></p>
+<p>操作维护</p>
+<p>10</p>
+<p>7</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025197&amp;courseId=Node1000007502" target="_blank" rel="noopener">AR G3路由器操作与维护培训(含初级操作与维护培训)</a></p>
+<p>操作维护</p>
+<p>15.5</p>
+<p>8</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025197&amp;courseId=Node1000007180" target="_blank" rel="noopener">NE路由器安装与基础调测培训</a></p>
+<p>操作维护</p>
+<p>3</p>
+<p>9</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025197&amp;courseId=Node1000007181" target="_blank" rel="noopener">NE路由器初级操作与维护培训</a></p>
+<p>操作维护</p>
+<p>4</p>
+<p>10</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025197&amp;courseId=Node1000007504" target="_blank" rel="noopener">NE路由器操作与维护培训(包含初级操作与维护培训)</a></p>
+<p>操作维护</p>
+<p>13</p>
+<p>11</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025197&amp;courseId=Node1000007501" target="_blank" rel="noopener">AR G3路由器操作与维护培训（Fast-Track）</a></p>
+<p>操作维护</p>
+<p>8</p>
+<p>12</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025199&amp;courseId=Node1000007498" target="_blank" rel="noopener">盒式交换机(S67/S57/S37/S27)操作与维护培训</a></p>
+<p>操作维护</p>
+<p>9</p>
+<p>13</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025199&amp;courseId=Node1000007497" target="_blank" rel="noopener">园区网交换机(S系列)操作与维护培训(Fast-Track)</a></p>
+<p>操作维护</p>
+<p>9.5</p>
+<p>14</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000007175" target="_blank" rel="noopener">企业MPLS VPN技术专题培训</a></p>
+<p>高级技术</p>
+<p>6</p>
+<p>15</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000007178" target="_blank" rel="noopener">企业网IPV6技术专题培训</a></p>
+<p>高级技术</p>
+<p>4.5</p>
+<p>16</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000007166" target="_blank" rel="noopener">企业广域网技术培训</a></p>
+<p>高级技术</p>
+<p>2</p>
+<p>17</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000007173" target="_blank" rel="noopener">企业网IP路由技术培训</a></p>
+<p>高级技术</p>
+<p>6</p>
+<p>18</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000007174" target="_blank" rel="noopener">企业IP VPN技术专题培训</a></p>
+<p>高级技术</p>
+<p>6</p>
+<p>19</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000007176" target="_blank" rel="noopener">企业网QoS技术专题培训</a></p>
+<p>高级技术</p>
+<p>1</p>
+<p>20</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000007177" target="_blank" rel="noopener">企业网HA技术专题培训</a></p>
+<p>高级技术</p>
+<p>1</p>
+<p>21</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000007542" target="_blank" rel="noopener">HCIE-R&amp;S考试揭秘</a></p>
+<p>高级技术</p>
+<p>6</p>
+<p>22</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000006113" target="_blank" rel="noopener">HCIE技术沙龙-路由协议OSPF讨论</a></p>
+<p>高级技术</p>
+<p>0.5</p>
+<p>23</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000004430" target="_blank" rel="noopener">HCIE技术沙龙-路由协议IS-IS的深入探讨</a></p>
+<p>高级技术</p>
+<p>0.5</p>
+<p>24</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000005980" target="_blank" rel="noopener">HCIE?技术沙龙-考试流程解读</a></p>
+<p>高级技术</p>
+<p>1</p>
+<p>25</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025144&amp;courseId=Node1000007758" target="_blank" rel="noopener">HCIE-R&amp;S HNC网络大会演讲</a></p>
+<p>高级技术</p>
+<p>5</p>
+<p>  <strong>2.WLAN</strong></p>
+<p><strong>序号</strong></p>
+<p><strong>课程名称</strong></p>
+<p><strong>课程类别</strong></p>
+<p><strong>课程时长</strong></p>
+<p>1</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025181&amp;courseId=Node1000006469" target="_blank" rel="noopener">华为移动办公解决方案</a></p>
+<p>技术基础</p>
+<p>2</p>
+<p>2</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025181&amp;courseId=Node1000007636" target="_blank" rel="noopener">华为WLAN网规网优</a></p>
+<p>规划设计</p>
+<p>13</p>
+<p>  <strong>3.**</strong>安全**</p>
+<p><strong>序号</strong></p>
+<p><strong>课程名称</strong></p>
+<p><strong>课程类别</strong></p>
+<p><strong>课程时长</strong></p>
+<p>1</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025180&amp;courseId=Node1000006038" target="_blank" rel="noopener">华为NIP2000系列产品介绍</a></p>
+<p>技术基础</p>
+<p>0.12</p>
+<p>2</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025180&amp;courseId=Node1000006039" target="_blank" rel="noopener">华为NIP5000系列产品介绍</a></p>
+<p>技术基础</p>
+<p>0.12</p>
+<p>3</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025180&amp;courseId=Node1000007136" target="_blank" rel="noopener">ASG产品介绍</a></p>
+<p>技术基础</p>
+<p>0.5</p>
+<p>4</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025180&amp;courseId=Node1000006041" target="_blank" rel="noopener">华为NIP系列产品硬件安装培训</a></p>
+<p>操作维护</p>
+<p>0.3</p>
+<p>5</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025180&amp;courseId=Node1000006040" target="_blank" rel="noopener">华为NIP系列产品BYPASS卡安装培训</a></p>
+<p>操作维护</p>
+<p>0.1</p>
+<p>6</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025180&amp;courseId=Node1000006032" target="_blank" rel="noopener">华为NIP Manager安装培训</a></p>
+<p>操作维护</p>
+<p>0.6</p>
+<p>7</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025180&amp;courseId=Node1000006245" target="_blank" rel="noopener">华为Secospace USG9310?统一安全网关 安装指南</a></p>
+<p>操作维护</p>
+<p>0.45</p>
+<p>8</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025180&amp;courseId=Node1000006246" target="_blank" rel="noopener">华为Secospace USG9320?统一安全网关 安装指南</a></p>
+<p>操作维护</p>
+<p>0.45</p>
+<p>9</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025180&amp;courseId=Node1000006600" target="_blank" rel="noopener">DSM产品基础安装配置</a></p>
+<p>操作维护</p>
+<p>13</p>
+<p>10</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025180&amp;courseId=Node1000006601" target="_blank" rel="noopener">TSM产品基础安装配置</a></p>
+<p>操作维护</p>
+<p>8</p>
+<p>11</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025180&amp;courseId=Node1000007137" target="_blank" rel="noopener">ASG产品操作与维护</a></p>
+<p>操作维护</p>
+<p>0.5</p>
+<p>12</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025180&amp;courseId=Node1000007139" target="_blank" rel="noopener">USG9000系列防火墙DPI特性介绍及配置</a></p>
+<p>操作维护</p>
+<p>0.5</p>
+<p>13</p>
+<p><a href="http://support.huawei.com/learning/nodeQueryAction!loadTrainProjectInfo?lang=zh&amp;pbiPath=term1000025180&amp;courseId=Node1000006875" target="_blank" rel="noopener">数据中心安全方案设计</a></p>
+<p>规划设计</p>
+<p>1</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2015/01/10/e5-a6-82-e4-bd-95-e9-98-b2-e6-ad-a2-e6-97-a0-e7-ba-bf-e7-bd-91-e7-bb-9c-e8-a2-ab-e7-a0-b4-e8-a7-a3/">
+                
+                    如何防止无线网络被破解
+                
+            </a>
+        </h2>
+        <time>
+            2015-01-10
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/运维/">运维</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>随着各种移动设备的普及，渐渐的基本上所有人家里都有了无线路由器，无线路由器刚刚普及的时候人们的安全意识不强一般不设置密码所以很容易被“蹭网”。现在无线设备普及了基本上没有不加密的无线网络了，但是一些不经意的设置 可能依然会让你被蹭网。 知己知彼，百战不殆。要想防止被蹭网 就来了解一下蹭网的原理。 一般蹭网都使用rtl8187或rt3070芯片的无线网卡在CDLinux环境下通过以下两种方法破解： 1.找到想要破解的无线信号后发送一个攻击包使无线AP请求无线终端的验证信息，然后“抓取握手包”保存握手包后搜寻字典进行破解。   2.通过pin破解，这种破解方法针对于有“一键连接”功能的无线路由器，通过不断变化pin码验证，由于pin码是8位纯数字 所以只要信号好就可以很轻松的破解成功。   了解了破解方法后，下面向大家介绍一下防止被破解的方法。 1.针对第一种破解方法主要方法是设置强密码，要超过8位并且数字字母符号混排并且无规律，最好的办法是利用密码生成软件生成随机密码，并且每3个月左右更换一次。密码越长越难破解这点不假但是有的人用自己的手机号码作为密码，11位的纯数字确实也很难破解，但是电话号码所属位置的排列信息都是公开的，这时只要下载一个手机号码生成工具就可以把本地区所有的电话号码生成出来，这样密码就很容易被破解了，所以使用手机号码作为密码是不安全的。 2.针对第二种破解方法，主要解决办法是关掉路由器的pin功能，只使用密码验证。并且购买无线路由器时不要一味的购买信号强的，要本着够用就行的原则，一来可以减少电磁辐射对身体健康的影响，二来可以大大延长pin破解的速度，pin破解对信号强度与质量的要求是非常大的。 3.终极大招，设置MAC地址白名单，将家中的所有无线设备的MAC地址添加到路由器的白名单中，这样不在白名单中的设备就无法连接到你的路由器了。 4.柔和方案，将所有不在白名单中的设备设置限速32k/s或更低，这样即使被人蹭网了 也会因为速度太慢而让蹭网者抓狂。</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2015/01/10/e5-a5-bd-e5-b7-a5-e5-85-b7-e5-a4-a7-e5-ae-b6-e5-88-86-e4-ba-ab/">
+                
+                    好工具大家分享
+                
+            </a>
+        </h2>
+        <time>
+            2015-01-10
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/运维/">运维</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>在日常的生活和学习当中，解决一些问题的时候会用到一些很实用的工具，这些工具有的很常见，很多人都知道，而另一些工具，恨少有人知道…… <strong>常见工具</strong> 1.SecureCRT   2.WinSCP   这两个工具用来管理Linux服务器可以说是绝配了，本人初次接触这两个工具是在自己架设某游戏的.私.服.的时候……   <strong>鲜为人知的实用小工具</strong> 1.ipop (ip工具合集) 有人说这个工具是华为制造的，但是在软件中没有发现华为的标记……但是这个工具确实是个实用的好工具。 首先这个工具是单文件绿色版的无需安装。   主要具有以下功能：</p>
+<ul>
+<li>ip绑定功能</li>
+<li>Windows路由表管理功能，可以方便的管理Windows系统内的路由表。</li>
+<li>MAC信息工具 方便的更换IP地址，自带一个MAC厂家信息表，但是数据库中好像没有无线网卡的MAC厂家信息。</li>
+<li>网络信息统计工具</li>
+<li>端口信息工具</li>
+<li>端口映射，就像家用路由器里的端口映射</li>
+<li>流量信息可以查看指定网卡的速度（就像Win8任务管理器中那样）</li>
+<li>抓包工具，简单的抓包分析功能。</li>
+<li>终端工具，支持多种协议，Win7/8系统中调路由器、交换机再也不用安装别的工具了。</li>
+<li>服务</li>
+<li><p>发包工具，这个功能需要配合WinPcap使用。</p>
+<p><strong>2.PCHunter(优秀的国产手工杀毒软件)</strong> 提到手工杀毒软件 大部分人应该都能想到冰刃，这个XP时代非常强大的工具，但是很遗憾，冰刃不支持win7以后的系统，更不支持64位操作系统了   而PCHunter这个工具能够支持最新的Windows8.1 x64操作系统，同样是个绿色软件 不过64位版本和32位版本是分开的单文件。     对IE右键菜单及其他不能直接设置的地方的操作 文件选项卡中可以对本地文件进行强制删除等操作。 PS:当我点击系统杂项功能的时候 我的Win8.1蓝屏并提示系统内核保护了……</p>
+</li>
+</ul>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+</section>
+
+
+    <br>
+    <div class="prev-next">
+        <div class="prev-next">
+            
+            <p class="current">
+                1 / 2
+            </p>
+            
+                <a class="next" rel="next" href="/archives/2015/page/2/">
+                    <section class="post next">
+                        &nbsp;下一页&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </section>
+                </a>
+            
+
+        </div>
+    </div>
+
+
+
+
+
+        </div>
+        <aside class='l_side'>
+            
+    
+    
+        <section class='m_widget categories'>
+    <div class='header'><i class="fa fa-sitemap fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;分类</div>
+    <div class='content'>
+        
+            <ul class="entry">
+                
+                    <li><a class="flat-box" href="/categories/C/"><div class='name'>C#</div><div class='badge'>11</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/extmail/"><div class='name'>extmail</div><div class='badge'>5</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/前端/"><div class='name'>前端</div><div class='badge'>2</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/服务器与运维/"><div class='name'>服务器与运维</div><div class='badge'>6</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/脚本/"><div class='name'>脚本</div><div class='badge'>2</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/运维/"><div class='name'>运维</div><div class='badge'>8</div></a></li>
+                
+            </ul>
+        
+    </div>
+</section>
+
+    
+    
+        
+    <section class='m_widget tagcloud'>
+        <div class="header"><i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;标签</div>
+        <div class='content'>
+            <a href="/tags/ASP-NET/" style="font-size: 14px; color: #999">ASP.NET</a> <a href="/tags/MVC/" style="font-size: 14px; color: #999">MVC</a> <a href="/tags/Ueditor/" style="font-size: 24px; color: #555">Ueditor</a> <a href="/tags/extmail/" style="font-size: 14px; color: #999">extmail</a> <a href="/tags/html5/" style="font-size: 14px; color: #999">html5</a> <a href="/tags/ie8/" style="font-size: 14px; color: #999">ie8</a> <a href="/tags/video/" style="font-size: 14px; color: #999">video</a> <a href="/tags/中文/" style="font-size: 14px; color: #999">中文</a> <a href="/tags/乱码/" style="font-size: 14px; color: #999">乱码</a> <a href="/tags/在IE8浏览器中播放video标签的视频/" style="font-size: 14px; color: #999">在IE8浏览器中播放video标签的视频</a> <a href="/tags/附件/" style="font-size: 14px; color: #999">附件</a>
+        </div>
+    </section>
+
+
+    
+    
+        <section class='m_widget music'>
+    <div class='header'><i class="fa fa-headphones fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;音乐</div>
+    <div class='content'>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=450 src="//music.163.com/outchain/player?type=0&id=112701651&auto=0&height=450"></iframe>
+    </div>
+</section>
+
+    
+    
+        <section class='m_widget links'>
+    <div class='header'><i class="fa fa-handshake-o fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;友链</div>
+    <div class='content'>
+        <ul class="entry" id="links">
+            
+                <li><a class="flat-box" target="_blank" rel="external nofollow noopener noreferrer" href="https://xaoxuu.com">
+                    <div class='name'>
+                        <i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i>
+                        &nbsp;&nbsp;xaoxuu
+                    </div>
+                </a></li>
+            
+            
+
+        </ul>
+
+    </div>
+</section>
+
+    
+    
+        
+
+    
+
+
+        </aside>
+        <script>setLoadingBarProgress(60);</script>
+    </div>
+    </div>
+    <footer id="footer" class="clearfix">
+    
+        <div class="social-wrapper">
+          
+              
+                  <a href="mailto:finaldusk@live.cn" class="social fa fa-envelope flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+                  <a href="https://github.com/finaldusk" class="social fa fa-github flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+                  <a href="atom" class="social fa fa-rss flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+        </div>
+    
+    <br>
+    <div>博客内容遵循 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="licenses">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></div>
+    <div>本站使用 <a href="https://github.com/xaoxuu/hexo-theme-material-x" target="_blank" class="codename">Material X</a> 作为主题，
+		总访问量为 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+    </div>
+</footer>
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+    <script>setLoadingBarProgress(80);</script>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<!-- 访问统计 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script src="/js/jquery.fitvids.js"></script>
+
+    <script>
+        var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+        var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+        var ALGOLIA_API_KEY = "";
+        var ALGOLIA_APP_ID = "";
+        var ALGOLIA_INDEX_NAME = "";
+        var AZURE_SERVICE_NAME = "";
+        var AZURE_INDEX_NAME = "";
+        var AZURE_QUERY_KEY = "";
+        var BAIDU_API_ID = "";
+        var SEARCH_SERVICE = "hexo" || "hexo";
+        var ROOT = "/"||"/";
+        if(!ROOT.endsWith('/'))ROOT += '/';
+    </script>
+
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+
+    <script>setLoadingBarProgress(100);</script>
+</body>

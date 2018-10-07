@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Archives: 2018/6 | 王鑫磊的记事本</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/">
+  <link rel="alternate" href="/atom.xml" title="王鑫磊的记事本">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="shortcut icon" href="" />
+  <link rel="icon" href="" />
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+    <script>setLoadingBarProgress(20)</script>
+    <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				<!-- <i class="fa fa-home"></i> -->
+				王鑫磊的记事本
+			</a>
+
+				<div class='menu'>
+					<ul class='h-list'>
+                        
+    						
+    							<li>
+    								<a class='nav-home flat-box' href='/'>
+    									<i class='fa fa-home fa-'></i>&nbsp;主页
+    								</a>
+    							</li>
+    						
+    							<li>
+    								<a class='nav-search flat-box' href='https://search.wangxinlei.cn'>
+    									<i class='fa fa-search fa-'></i>&nbsp;搜索导航
+    								</a>
+    							</li>
+    						
+    							<li>
+    								<a class='nav-archives flat-box' href='/archives'>
+    									<i class='fa fa-archive fa-'></i>&nbsp;归档
+    								</a>
+    							</li>
+    						
+        			 
+					</ul>
+					<div class='underline'></div>
+				</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon"><i class="fa fa-search fa-fw"></i></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fa fa-search fa-fw" href='javascript:void(0)'></span></a></li>
+				
+				<li class='s-menu'><a class="fa fa-navicon fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				xaoxuu
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="fa fa-comments fa-fw flat-box" href='javascript:void(0)'></a></li>
+				<li class='s-top'><a class="fa fa-arrow-up fa-fw flat-box" href='javascript:void(0)'></a></li>
+				<li class='s-toc'><a class="fa fa-list-ul fa-fw flat-box" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+        <div class="header">王鑫磊的记事本</div>
+		<nav>
+            <ul>
+                
+                    
+                        <li>
+                            <a class='nav-home flat-box nav flat-box' href='/'><i class='fa fa-home fa-fw'></i>&nbsp;主页</a>
+                        </li>
+                    
+                        <li>
+                            <a class='nav-search flat-box nav flat-box' href='https://search.wangxinlei.cn'><i class='fa fa-search fa-fw'></i>&nbsp;搜索导航</a>
+                        </li>
+                    
+                        <li>
+                            <a class='nav-archives flat-box nav flat-box' href='/archives'><i class='fa fa-archive fa-fw'></i>&nbsp;归档</a>
+                        </li>
+                    
+             
+            </ul>
+		</nav>
+	</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+    <div class="l_body">
+    <div class='container clearfix'>
+        <div class='l_main'>
+            
+	
+    <script>
+        window.subData= { title:'year : 2018.6'}
+    </script>
+
+
+<section class="post-list">
+    
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2018/06/01/qmail2postfix/">
+                
+                    迁移QMail到POSTFIX(ExtMail)
+                
+            </a>
+        </h2>
+        <time>
+            2018-06-01
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/extmail/">extmail</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <h1 id="迁移身份认证数据库"><a href="#迁移身份认证数据库" class="headerlink" title="迁移身份认证数据库"></a>迁移身份认证数据库</h1><h2 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具:"></a>使用工具:</h2><ul>
+<li>navicat</li>
+<li>Excel</li>
+</ul>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>Qmail身份认证数据库存储的内容与Postfix身份认证所用数据库有所差异，但都可以通过拼接字符串方式来消除差异，通过Excel函数拼接字符串生成SQL脚本。</p>
+<h2 id="具体步骤："><a href="#具体步骤：" class="headerlink" title="具体步骤："></a>具体步骤：</h2><ol>
+<li>使用navicat登陆原邮件服务器数据库，导出vpopmail的vpopmail表为Excel文件，注意选择正确的编码格式防止出现乱码（一般为GBK）</li>
+<li>打开导出的Excel文件，新建一张工作表<strong>建库脚本</strong></li>
+<li>新工作表各列公式如下</li>
+</ol>
+<p>A列username邮件地址</p>
+<blockquote>
+<p>=vpopmail!B1&amp;”@”&amp;vpopmail!C1</p>
+</blockquote>
+<p>B列uid用户名</p>
+<blockquote>
+<p>=vpopmail!B1</p>
+</blockquote>
+<p>C列password密码</p>
+<blockquote>
+<p>=vpopmail!D1</p>
+</blockquote>
+<p>D列name姓名</p>
+<blockquote>
+<p>=vpopmail!G1</p>
+</blockquote>
+<p>E列maildir邮箱存储路径</p>
+<blockquote>
+<p>=MID(vpopmail!H1,24,100)&amp;”/Maildir”</p>
+</blockquote>
+<p>F列Homedir用户存储路径</p>
+<blockquote>
+<p>=MID(vpopmail!H1,24,100)</p>
+</blockquote>
+<p>G列quota邮箱大小</p>
+<blockquote>
+<p>因为要扩容到每人1G故填写固定值 <strong>1073741824S</strong></p>
+</blockquote>
+<p>H列netdiskquota网盘大小</p>
+<blockquote>
+<p>因为要扩容到每人1G故填写固定值 <strong>1073741824S</strong></p>
+</blockquote>
+<p>I列domain域名</p>
+<blockquote>
+<p>=vpopmail!C1</p>
+</blockquote>
+<p>J列uidnumber用户文件所有人</p>
+<blockquote>
+<p>固定值<strong>1000</strong></p>
+</blockquote>
+<p>K列gidnumber用户文件所有组</p>
+<blockquote>
+<p>固定值<strong>1000</strong></p>
+</blockquote>
+<p>L列createtime创建时间</p>
+<blockquote>
+<p>=vpopmail!K1</p>
+</blockquote>
+<p>M列expiredate过期时间</p>
+<blockquote>
+<p>固定值<strong>0000-00-00</strong></p>
+</blockquote>
+<p>N列active是否启用</p>
+<blockquote>
+<p>固定值<strong>1</strong></p>
+</blockquote>
+<p>  P列拼接SQL语句</p>
+<blockquote>
+<p>=”INSERT INTO `mailbox` VALUES (‘“&amp;A2&amp;”‘, ‘“&amp;B2&amp;”‘, ‘“&amp;C2&amp;”‘, ‘’, ‘“&amp;D2&amp;”‘, ‘’, ‘“&amp;E2&amp;”‘, ‘“&amp;F2&amp;”‘, ‘1073741824S’, ‘1073741824S’, ‘ln.pcc’, 1000, 1000, ‘“&amp;L2&amp;”‘, ‘0000-00-00’, 1,0, 0, 0, 0, 0, 0, 0, ‘’, ‘’);”</p>
+</blockquote>
+<p><strong>注：固定值列可以引用对应单元格，也可以直接写到公式里，根据需求决定</strong> 4.navicat连接到新邮件服务器数据库中执行使用Excel生成的SQL语句  </p>
+<h1 id="迁移邮件存储"><a href="#迁移邮件存储" class="headerlink" title="迁移邮件存储"></a>迁移邮件存储</h1><h2 id="使用工具-1"><a href="#使用工具-1" class="headerlink" title="使用工具"></a>使用工具</h2><ul>
+<li>PuTTY</li>
+</ul>
+<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><p>1.登陆原邮件服务器打包邮件存储传送到新邮件服务器中</p>
+<p>tar czvf  domain.tar.gz /home/vpopmail/domains/<br>sftp 【新邮件服务器IP地址】<br>【新邮件服务器密码】<br>put domain.tar.gz<br>exit</p>
+<p>2.解压打包的文件并放到其应该在的位置</p>
+<p>tar  -zxvf   domain.tar.gz<br>cp -R 【目录】 /home/domains/</p>
+<h1 id="迁移网盘"><a href="#迁移网盘" class="headerlink" title="迁移网盘"></a>迁移网盘</h1><h2 id="使用工具-2"><a href="#使用工具-2" class="headerlink" title="使用工具"></a>使用工具</h2><ul>
+<li>Excel</li>
+<li>PuTTY</li>
+<li>convmv</li>
+</ul>
+<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>Qmail的网盘位于/home/netdisk/【域名】/【用户名】 Extmail的网盘位于/home/domains/【域名】/【用户名】/Maildir/fileman/ Qmail的网盘储存文件名采用GBK编码，Extmail的网盘储存文件名采用UTF-8编码</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>使用Excel生成文件迁移脚本 使用convmv解决文件名乱码</p>
+<h2 id="具体步骤-1"><a href="#具体步骤-1" class="headerlink" title="具体步骤"></a>具体步骤</h2><p>1.在之前使用的Excel中新建一张工作表 各列公式如下 A列用户名</p>
+<blockquote>
+<p>=vpopmail!B1</p>
+</blockquote>
+<p>B列新网盘所在目录</p>
+<blockquote>
+<p>=建库脚本!E2&amp;”/fileman/“</p>
+</blockquote>
+<p>C列Shell脚本</p>
+<blockquote>
+<p>=”cp -r /home/netdisk/ln.pcc/“&amp;A2&amp;”/ /home/domains/“&amp;B2&amp;””</p>
+</blockquote>
+<p>2..登陆原邮件服务器打包网盘传送到新邮件服务器中</p>
+<p>tar czvf  netdisk.tar.gz /home/netdisk/<br>sftp 【新邮件服务器IP地址】<br>【新邮件服务器密码】<br>put netdisk.tar.gz<br>exit</p>
+<p>2.解压打包的文件并放到Home文件夹</p>
+<p>tar  -zxvf   netdisk.tar.gz<br>cp -R 【目录】 /home/netdisk/</p>
+<p>3.允许excel生成的shell脚本拷贝文件 4.执行命令修改文件名编码</p>
+<p>convmv -f gbk -t utf-8 -r –notest /home/domains/</p>
+<h1 id="生成新的全局通讯录"><a href="#生成新的全局通讯录" class="headerlink" title="生成新的全局通讯录"></a>生成新的全局通讯录</h1><h2 id="使用工具-3"><a href="#使用工具-3" class="headerlink" title="使用工具"></a>使用工具</h2><ul>
+<li>Excel</li>
+<li>navicat</li>
+</ul>
+<h2 id="具体步骤-2"><a href="#具体步骤-2" class="headerlink" title="具体步骤"></a>具体步骤</h2><p>1.连接到原邮件服务器导出dept表，并将表移动至刚刚使用的Excel中 2.新建一张工作表通讯录 3.各列公式如下 A列姓名</p>
+<blockquote>
+<p>=vpopmail!G1</p>
+</blockquote>
+<p>B列邮箱地址</p>
+<blockquote>
+<p>=建库脚本!A2</p>
+</blockquote>
+<p>C列部门</p>
+<blockquote>
+<p>=VLOOKUP(vpopmail!M1,dept!$A$1:$B$36,2,FALSE)</p>
+</blockquote>
+<p>D列电话</p>
+<blockquote>
+<p>由于原数据库中没存电话故填入固定值024-00000000</p>
+</blockquote>
+<p>E列通讯录所需格式</p>
+<blockquote>
+<p>=””””&amp;A2&amp;”””,”””&amp;B2&amp;”””,”””&amp;C2&amp;”””,”””&amp;D2&amp;””””</p>
+</blockquote>
+<h1 id="后续操作"><a href="#后续操作" class="headerlink" title="后续操作"></a>后续操作</h1><h2 id="1-变更文件所有权"><a href="#1-变更文件所有权" class="headerlink" title="1.变更文件所有权"></a>1.变更文件所有权</h2><p>chown -R vuser.vgroup /home/domains/</p>
+<p>若不进行此操作用户登陆邮箱后会提示无权操作文件</p>
+<h2 id="2-删除原网盘内记录网盘使用情况的文件"><a href="#2-删除原网盘内记录网盘使用情况的文件" class="headerlink" title="2.删除原网盘内记录网盘使用情况的文件"></a>2.删除原网盘内记录网盘使用情况的文件</h2><p>find /home/ -name .ftpquota | xargs rm</p>
+<p>若不进行此操作则用户登陆网盘后会看见<strong>.ftpquota</strong>这个文件而这个文件无论是对于用户还是对于新邮件系统都是无用 的</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+</section>
+
+
+
+
+
+        </div>
+        <aside class='l_side'>
+            
+    
+    
+        <section class='m_widget categories'>
+    <div class='header'><i class="fa fa-sitemap fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;分类</div>
+    <div class='content'>
+        
+            <ul class="entry">
+                
+                    <li><a class="flat-box" href="/categories/C/"><div class='name'>C#</div><div class='badge'>11</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/extmail/"><div class='name'>extmail</div><div class='badge'>5</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/前端/"><div class='name'>前端</div><div class='badge'>2</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/服务器与运维/"><div class='name'>服务器与运维</div><div class='badge'>6</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/脚本/"><div class='name'>脚本</div><div class='badge'>2</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/运维/"><div class='name'>运维</div><div class='badge'>8</div></a></li>
+                
+            </ul>
+        
+    </div>
+</section>
+
+    
+    
+        
+    <section class='m_widget tagcloud'>
+        <div class="header"><i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;标签</div>
+        <div class='content'>
+            <a href="/tags/ASP-NET/" style="font-size: 14px; color: #999">ASP.NET</a> <a href="/tags/MVC/" style="font-size: 14px; color: #999">MVC</a> <a href="/tags/Ueditor/" style="font-size: 24px; color: #555">Ueditor</a> <a href="/tags/extmail/" style="font-size: 14px; color: #999">extmail</a> <a href="/tags/html5/" style="font-size: 14px; color: #999">html5</a> <a href="/tags/ie8/" style="font-size: 14px; color: #999">ie8</a> <a href="/tags/video/" style="font-size: 14px; color: #999">video</a> <a href="/tags/中文/" style="font-size: 14px; color: #999">中文</a> <a href="/tags/乱码/" style="font-size: 14px; color: #999">乱码</a> <a href="/tags/在IE8浏览器中播放video标签的视频/" style="font-size: 14px; color: #999">在IE8浏览器中播放video标签的视频</a> <a href="/tags/附件/" style="font-size: 14px; color: #999">附件</a>
+        </div>
+    </section>
+
+
+    
+    
+        <section class='m_widget music'>
+    <div class='header'><i class="fa fa-headphones fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;音乐</div>
+    <div class='content'>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=450 src="//music.163.com/outchain/player?type=0&id=112701651&auto=0&height=450"></iframe>
+    </div>
+</section>
+
+    
+    
+        <section class='m_widget links'>
+    <div class='header'><i class="fa fa-handshake-o fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;友链</div>
+    <div class='content'>
+        <ul class="entry" id="links">
+            
+                <li><a class="flat-box" target="_blank" rel="external nofollow noopener noreferrer" href="https://xaoxuu.com">
+                    <div class='name'>
+                        <i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i>
+                        &nbsp;&nbsp;xaoxuu
+                    </div>
+                </a></li>
+            
+            
+
+        </ul>
+
+    </div>
+</section>
+
+    
+    
+        
+
+    
+
+
+        </aside>
+        <script>setLoadingBarProgress(60);</script>
+    </div>
+    </div>
+    <footer id="footer" class="clearfix">
+    
+        <div class="social-wrapper">
+          
+              
+                  <a href="mailto:finaldusk@live.cn" class="social fa fa-envelope flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+                  <a href="https://github.com/finaldusk" class="social fa fa-github flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+                  <a href="atom" class="social fa fa-rss flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+        </div>
+    
+    <br>
+    <div>博客内容遵循 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="licenses">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></div>
+    <div>本站使用 <a href="https://github.com/xaoxuu/hexo-theme-material-x" target="_blank" class="codename">Material X</a> 作为主题，
+		总访问量为 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+    </div>
+</footer>
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+    <script>setLoadingBarProgress(80);</script>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<!-- 访问统计 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script src="/js/jquery.fitvids.js"></script>
+
+    <script>
+        var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+        var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+        var ALGOLIA_API_KEY = "";
+        var ALGOLIA_APP_ID = "";
+        var ALGOLIA_INDEX_NAME = "";
+        var AZURE_SERVICE_NAME = "";
+        var AZURE_INDEX_NAME = "";
+        var AZURE_QUERY_KEY = "";
+        var BAIDU_API_ID = "";
+        var SEARCH_SERVICE = "hexo" || "hexo";
+        var ROOT = "/"||"/";
+        if(!ROOT.endsWith('/'))ROOT += '/';
+    </script>
+
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+
+    <script>setLoadingBarProgress(100);</script>
+</body>

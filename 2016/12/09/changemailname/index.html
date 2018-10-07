@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>邮件服务器更换域名 | 王鑫磊的记事本</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/">
+  <link rel="alternate" href="/atom.xml" title="王鑫磊的记事本">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="shortcut icon" href="" />
+  <link rel="icon" href="" />
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+    <script>setLoadingBarProgress(20)</script>
+    <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				<!-- <i class="fa fa-home"></i> -->
+				王鑫磊的记事本
+			</a>
+
+				<div class='menu'>
+					<ul class='h-list'>
+                        
+    						
+    							<li>
+    								<a class='nav-home flat-box' href='/'>
+    									<i class='fa fa-home fa-'></i>&nbsp;主页
+    								</a>
+    							</li>
+    						
+    							<li>
+    								<a class='nav-search flat-box' href='https://search.wangxinlei.cn'>
+    									<i class='fa fa-search fa-'></i>&nbsp;搜索导航
+    								</a>
+    							</li>
+    						
+    							<li>
+    								<a class='nav-archives flat-box' href='/archives'>
+    									<i class='fa fa-archive fa-'></i>&nbsp;归档
+    								</a>
+    							</li>
+    						
+        			 
+					</ul>
+					<div class='underline'></div>
+				</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon"><i class="fa fa-search fa-fw"></i></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fa fa-search fa-fw" href='javascript:void(0)'></span></a></li>
+				
+				<li class='s-menu'><a class="fa fa-navicon fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				xaoxuu
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="fa fa-comments fa-fw flat-box" href='javascript:void(0)'></a></li>
+				<li class='s-top'><a class="fa fa-arrow-up fa-fw flat-box" href='javascript:void(0)'></a></li>
+				<li class='s-toc'><a class="fa fa-list-ul fa-fw flat-box" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+        <div class="header">王鑫磊的记事本</div>
+		<nav>
+            <ul>
+                
+                    
+                        <li>
+                            <a class='nav-home flat-box nav flat-box' href='/'><i class='fa fa-home fa-fw'></i>&nbsp;主页</a>
+                        </li>
+                    
+                        <li>
+                            <a class='nav-search flat-box nav flat-box' href='https://search.wangxinlei.cn'><i class='fa fa-search fa-fw'></i>&nbsp;搜索导航</a>
+                        </li>
+                    
+                        <li>
+                            <a class='nav-archives flat-box nav flat-box' href='/archives'><i class='fa fa-archive fa-fw'></i>&nbsp;归档</a>
+                        </li>
+                    
+             
+            </ul>
+		</nav>
+	</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+    <div class="l_body">
+    <div class='container clearfix'>
+        <div class='l_main'>
+            <article id="post-changemailname" class="post white-box article-type-post" itemscope itemprop="blogPost">
+    <section class='meta'>
+        <h1 class="title">
+            
+                邮件服务器更换域名
+            
+        </h1>
+        <time>
+            2016-12-09&nbsp;&nbsp;
+            <i class="fa fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/extmail/">extmail</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>按照上一篇 <a href="http://www.wangxinlei.cn/2016/12/emailsystembaseoncentos6-5/">基于CentOS6.5搭建的邮件系统</a> 搭建完邮件服务器后需要将邮件服务器克隆并更换域名这时只需按照如下方法修改相关配置文件即可</p>
+<h1 id="修改IP地址"><a href="#修改IP地址" class="headerlink" title="修改IP地址"></a>修改IP地址</h1><p>克隆邮件服务器虚拟机后MAC地址会发生变化这时需要做一些操作将”新网卡”变成eth0</p>
+<p># vi /etc/udev/rules.d/70-persistent-net.rules</p>
+<p>##出现以下内容，会看到有2块网卡eth0和eth1，eth0为原系统的，eth1为新生成的<br># PCI device0x1022:0x2000 (pcnet32)<br>SUBSYSTEM==”net”, ACTION==”add”,DRIVERS==”?<em>“, ATTR{address}==”00:0c:29:16:f4:91”,ATTR{type}==”1”, KERNEL==”eth</em>“, NAME=”eth0”</p>
+<p># PCI device0x1022:0x2000 (pcnet32)<br>SUBSYSTEM==”net”, ACTION==”add”,DRIVERS==”?<em>“, ATTR{address}==”00:0c:29:52:45:fc”,ATTR{type}==”1”, KERNEL==”eth</em>“, NAME=”eth1”</p>
+<p>##将原网卡注释掉并将新网卡名称变更为eth0</p>
+<p># PCI device0x1022:0x2000 (pcnet32) </p>
+<p>#SUBSYSTEM==”net”, ACTION==”add”,DRIVERS==”?<em>“, ATTR{address}==”00:0c:29:16:f4:91”,ATTR{type}==”1”, KERNEL==”eth</em>“, NAME=”eth0”</p>
+<p># PCI device0x1022:0x2000 (pcnet32)<br>SUBSYSTEM==”net”, ACTION==”add”,DRIVERS==”?<em>“, ATTR{address}==”00:0c:29:52:45:fc”,ATTR{type}==”1”, KERNEL==”eth</em>“, NAME=”eth0”</p>
+<p>记录一下新生成的MAC地址下一步操作会用到</p>
+<p>#vi /etc/sysconfig/network-scripts/ifcfg-eth0</p>
+<p>HWADDR=00:0C:29:52:45:fc   ##将MAC地址修改为新MAC<br>IPADDR=192.168.1.99 ##修改IP地址</p>
+<p>#vi /etc/sysconfig/network</p>
+<p>HOSTNAME=mail.fmail.com ##修改主机名</p>
+<p>#shutdown -r now  ##重新启动</p>
+<p>启动之后就可以重新使用SSH连接了</p>
+<h1 id="修改POSTFIX配置文件"><a href="#修改POSTFIX配置文件" class="headerlink" title="修改POSTFIX配置文件"></a>修改POSTFIX配置文件</h1><p>vi /etc/postfix/main.cf<br>myhostname = mail.fmail.com</p>
+<h1 id="重新初始化数据库"><a href="#重新初始化数据库" class="headerlink" title="重新初始化数据库"></a>重新初始化数据库</h1><p>#cd /var/www/extsuite</p>
+<p>#mysql -uroot -p123456<br>mysql&gt; DROP DATABASE extmail;<br>mysql&gt; quit</p>
+<p>##email.com为原域名 fmail.com为现域名<br>[root@mail extsuite]# mysql -uroot -p123456 &lt; extman/docs/extmail.sql<br>[root@mail extsuite]# sed -i ‘s/email.com/fmail.com/g’ extman/docs/init.sql<br>[root@mail extsuite]# sed -i ‘s/1000/1002/g’ extman/docs/init.sql<br>[root@mail extsuite]# mysql -uroot -p123456 &lt; /var/www/extsuite/extman/docs/init.sql</p>
+<h1 id="修改Apache配置"><a href="#修改Apache配置" class="headerlink" title="修改Apache配置"></a>修改Apache配置</h1><p>#vi /etc/httpd/conf.d/extmail.conf<br>ServerName mail.fmail.com</p>
+<p>##修改ServerName</p>
+<h1 id="建立Maildir"><a href="#建立Maildir" class="headerlink" title=" 建立Maildir"></a> 建立Maildir</h1><p>#cd /var/www/extsuite/extman/tools<br>[root@mail tools]# ./maildirmake.pl /home/domains/fmail.com/postmaster/Maildir<br>[root@mail tools]# chown -R vmail:vmail /home/domains</p>
+<h1 id="重新启动"><a href="#重新启动" class="headerlink" title=" 重新启动"></a> 重新启动</h1><p>#shutdown -r now</p>
+
+        </div>
+
+        
+            <div class="article-tags tags">
+                
+            </div>
+        
+
+        
+            <div class="prev-next">
+                
+                    <section class="prev" >
+                        <span class="art-item-left">
+                            <h6><i class="fa fa-chevron-left" aria-hidden="true"></i>&nbsp;上一篇</h6>
+                            <h4>
+                                <a href="/2017/01/05/liaoningxy/" rel="prev" title="辽宁省县区经纬坐标">
+                                  
+                                      辽宁省县区经纬坐标
+                                  
+                                </a>
+                            </h4>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一篇&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2016/12/08/emailsystembaseoncentos6-5/" rel="prev" title="基于CentOS6.5搭建的邮件系统">
+                                    
+                                        基于CentOS6.5搭建的邮件系统
+                                    
+                                </a>
+                            </h4>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+
+    </section>
+
+</article>
+
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+    <article class="post white-box comments">
+        <section class="article typo">
+
+            
+                
+
+    <div class="recommended_posts">
+        <h4><i class="fa fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
+        <ul>
+            
+                <li><a href="http://www.wangxinlei.cn/2017/02/14/bootstrap-bundle/">Bootstrap在使用Bundle时提示数组越界</a></li>
+            
+                <li><a href="http://www.wangxinlei.cn/2017/01/05/liaoningxy/">辽宁省县区经纬坐标</a></li>
+            
+                <li><a href="http://www.wangxinlei.cn/2016/12/08/emailsystembaseoncentos6-5/">基于CentOS6.5搭建的邮件系统</a></li>
+            
+                <li><a href="http://www.wangxinlei.cn/2016/09/26/using-bundle-in-empty-asp-net-mvc-project/">在空ASP.NET MVC网站中使用Bundle</a></li>
+            
+                <li><a href="http://www.wangxinlei.cn/2016/09/08/asp-net-mvc-roles/">ASP.NET MVC实现灵活的角色控制功能</a></li>
+            
+        </ul>
+    </div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+
+
+            
+
+            
+
+                
+
+                
+
+                
+            
+
+        </section>
+    </article>
+
+
+<script>
+    window.subData = {
+        title: '邮件服务器更换域名',
+        tools: true
+    }
+</script>
+
+
+        </div>
+        <aside class='l_side'>
+            
+    
+    
+        <section class='m_widget categories'>
+    <div class='header'><i class="fa fa-sitemap fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;分类</div>
+    <div class='content'>
+        
+            <ul class="entry">
+                
+                    <li><a class="flat-box" href="/categories/C/"><div class='name'>C#</div><div class='badge'>11</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/extmail/"><div class='name'>extmail</div><div class='badge'>5</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/前端/"><div class='name'>前端</div><div class='badge'>2</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/服务器与运维/"><div class='name'>服务器与运维</div><div class='badge'>6</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/脚本/"><div class='name'>脚本</div><div class='badge'>2</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/运维/"><div class='name'>运维</div><div class='badge'>8</div></a></li>
+                
+            </ul>
+        
+    </div>
+</section>
+
+    
+    
+        
+    <section class='m_widget tagcloud'>
+        <div class="header"><i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;标签</div>
+        <div class='content'>
+            <a href="/tags/ASP-NET/" style="font-size: 14px; color: #999">ASP.NET</a> <a href="/tags/MVC/" style="font-size: 14px; color: #999">MVC</a> <a href="/tags/Ueditor/" style="font-size: 24px; color: #555">Ueditor</a> <a href="/tags/extmail/" style="font-size: 14px; color: #999">extmail</a> <a href="/tags/html5/" style="font-size: 14px; color: #999">html5</a> <a href="/tags/ie8/" style="font-size: 14px; color: #999">ie8</a> <a href="/tags/video/" style="font-size: 14px; color: #999">video</a> <a href="/tags/中文/" style="font-size: 14px; color: #999">中文</a> <a href="/tags/乱码/" style="font-size: 14px; color: #999">乱码</a> <a href="/tags/在IE8浏览器中播放video标签的视频/" style="font-size: 14px; color: #999">在IE8浏览器中播放video标签的视频</a> <a href="/tags/附件/" style="font-size: 14px; color: #999">附件</a>
+        </div>
+    </section>
+
+
+    
+    
+        <section class='m_widget music'>
+    <div class='header'><i class="fa fa-headphones fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;音乐</div>
+    <div class='content'>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=450 src="//music.163.com/outchain/player?type=0&id=112701651&auto=0&height=450"></iframe>
+    </div>
+</section>
+
+    
+    
+        <section class='m_widget links'>
+    <div class='header'><i class="fa fa-handshake-o fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;友链</div>
+    <div class='content'>
+        <ul class="entry" id="links">
+            
+                <li><a class="flat-box" target="_blank" rel="external nofollow noopener noreferrer" href="https://xaoxuu.com">
+                    <div class='name'>
+                        <i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i>
+                        &nbsp;&nbsp;xaoxuu
+                    </div>
+                </a></li>
+            
+            
+
+        </ul>
+
+    </div>
+</section>
+
+    
+    
+        
+    <section class='m_widget toc-wrapper'>
+        <div class="header"><i class="fa fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;目录</div>
+        <div class='content'>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#修改IP地址"><span class="toc-text">修改IP地址</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改POSTFIX配置文件"><span class="toc-text">修改POSTFIX配置文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#重新初始化数据库"><span class="toc-text">重新初始化数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改Apache配置"><span class="toc-text">修改Apache配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立Maildir"><span class="toc-text"> 建立Maildir</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#重新启动"><span class="toc-text"> 重新启动</span></a></li></ol>
+        </div>
+    </section>
+
+
+    
+
+
+        </aside>
+        <script>setLoadingBarProgress(60);</script>
+    </div>
+    </div>
+    <footer id="footer" class="clearfix">
+    
+        <div class="social-wrapper">
+          
+              
+                  <a href="mailto:finaldusk@live.cn" class="social fa fa-envelope flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+                  <a href="https://github.com/finaldusk" class="social fa fa-github flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+                  <a href="atom" class="social fa fa-rss flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+        </div>
+    
+    <br>
+    <div>博客内容遵循 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="licenses">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></div>
+    <div>本站使用 <a href="https://github.com/xaoxuu/hexo-theme-material-x" target="_blank" class="codename">Material X</a> 作为主题，
+		总访问量为 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+    </div>
+</footer>
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+    <script>setLoadingBarProgress(80);</script>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<!-- 访问统计 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script src="/js/jquery.fitvids.js"></script>
+
+    <script>
+        var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+        var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+        var ALGOLIA_API_KEY = "";
+        var ALGOLIA_APP_ID = "";
+        var ALGOLIA_INDEX_NAME = "";
+        var AZURE_SERVICE_NAME = "";
+        var AZURE_INDEX_NAME = "";
+        var AZURE_QUERY_KEY = "";
+        var BAIDU_API_ID = "";
+        var SEARCH_SERVICE = "hexo" || "hexo";
+        var ROOT = "/"||"/";
+        if(!ROOT.endsWith('/'))ROOT += '/';
+    </script>
+
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+    
+    
+    
+
+
+    <script>setLoadingBarProgress(100);</script>
+</body>

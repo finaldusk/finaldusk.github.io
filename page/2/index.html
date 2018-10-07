@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>王鑫磊的记事本</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/">
+  <link rel="alternate" href="/atom.xml" title="王鑫磊的记事本">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="shortcut icon" href="" />
+  <link rel="icon" href="" />
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+    <script>setLoadingBarProgress(20)</script>
+    <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				<!-- <i class="fa fa-home"></i> -->
+				王鑫磊的记事本
+			</a>
+
+				<div class='menu'>
+					<ul class='h-list'>
+                        
+    						
+    							<li>
+    								<a class='nav-home flat-box' href='/'>
+    									<i class='fa fa-home fa-'></i>&nbsp;主页
+    								</a>
+    							</li>
+    						
+    							<li>
+    								<a class='nav-search flat-box' href='https://search.wangxinlei.cn'>
+    									<i class='fa fa-search fa-'></i>&nbsp;搜索导航
+    								</a>
+    							</li>
+    						
+    							<li>
+    								<a class='nav-archives flat-box' href='/archives'>
+    									<i class='fa fa-archive fa-'></i>&nbsp;归档
+    								</a>
+    							</li>
+    						
+        			 
+					</ul>
+					<div class='underline'></div>
+				</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon"><i class="fa fa-search fa-fw"></i></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fa fa-search fa-fw" href='javascript:void(0)'></span></a></li>
+				
+				<li class='s-menu'><a class="fa fa-navicon fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				xaoxuu
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="fa fa-comments fa-fw flat-box" href='javascript:void(0)'></a></li>
+				<li class='s-top'><a class="fa fa-arrow-up fa-fw flat-box" href='javascript:void(0)'></a></li>
+				<li class='s-toc'><a class="fa fa-list-ul fa-fw flat-box" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+        <div class="header">王鑫磊的记事本</div>
+		<nav>
+            <ul>
+                
+                    
+                        <li>
+                            <a class='nav-home flat-box nav flat-box' href='/'><i class='fa fa-home fa-fw'></i>&nbsp;主页</a>
+                        </li>
+                    
+                        <li>
+                            <a class='nav-search flat-box nav flat-box' href='https://search.wangxinlei.cn'><i class='fa fa-search fa-fw'></i>&nbsp;搜索导航</a>
+                        </li>
+                    
+                        <li>
+                            <a class='nav-archives flat-box nav flat-box' href='/archives'><i class='fa fa-archive fa-fw'></i>&nbsp;归档</a>
+                        </li>
+                    
+             
+            </ul>
+		</nav>
+	</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+    <div class="l_body">
+    <div class='container clearfix'>
+        <div class='l_main'>
+            
+
+<section class="post-list">
+    
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/12/09/changemailname/">
+                
+                    邮件服务器更换域名
+                
+            </a>
+        </h2>
+        <time>
+            2016-12-09
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/extmail/">extmail</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>按照上一篇 <a href="http://www.wangxinlei.cn/2016/12/emailsystembaseoncentos6-5/">基于CentOS6.5搭建的邮件系统</a> 搭建完邮件服务器后需要将邮件服务器克隆并更换域名这时只需按照如下方法修改相关配置文件即可</p>
+<h1 id="修改IP地址"><a href="#修改IP地址" class="headerlink" title="修改IP地址"></a>修改IP地址</h1><p>克隆邮件服务器虚拟机后MAC地址会发生变化这时需要做一些操作将”新网卡”变成eth0</p>
+<p># vi /etc/udev/rules.d/70-persistent-net.rules</p>
+<p>##出现以下内容，会看到有2块网卡eth0和eth1，eth0为原系统的，eth1为新生成的<br># PCI device0x1022:0x2000 (pcnet32)<br>SUBSYSTEM==”net”, ACTION==”add”,DRIVERS==”?<em>“, ATTR{address}==”00:0c:29:16:f4:91”,ATTR{type}==”1”, KERNEL==”eth</em>“, NAME=”eth0”</p>
+<p># PCI device0x1022:0x2000 (pcnet32)<br>SUBSYSTEM==”net”, ACTION==”add”,DRIVERS==”?<em>“, ATTR{address}==”00:0c:29:52:45:fc”,ATTR{type}==”1”, KERNEL==”eth</em>“, NAME=”eth1”</p>
+<p>##将原网卡注释掉并将新网卡名称变更为eth0</p>
+<p># PCI device0x1022:0x2000 (pcnet32) </p>
+<p>#SUBSYSTEM==”net”, ACTION==”add”,DRIVERS==”?<em>“, ATTR{address}==”00:0c:29:16:f4:91”,ATTR{type}==”1”, KERNEL==”eth</em>“, NAME=”eth0”</p>
+<p># PCI device0x1022:0x2000 (pcnet32)<br>SUBSYSTEM==”net”, ACTION==”add”,DRIVERS==”?<em>“, ATTR{address}==”00:0c:29:52:45:fc”,ATTR{type}==”1”, KERNEL==”eth</em>“, NAME=”eth0”</p>
+<p>记录一下新生成的MAC地址下一步操作会用到</p>
+<p>#vi /etc/sysconfig/network-scripts/ifcfg-eth0</p>
+<p>HWADDR=00:0C:29:52:45:fc   ##将MAC地址修改为新MAC<br>IPADDR=192.168.1.99 ##修改IP地址</p>
+<p>#vi /etc/sysconfig/network</p>
+<p>HOSTNAME=mail.fmail.com ##修改主机名</p>
+<p>#shutdown -r now  ##重新启动</p>
+<p>启动之后就可以重新使用SSH连接了</p>
+<h1 id="修改POSTFIX配置文件"><a href="#修改POSTFIX配置文件" class="headerlink" title="修改POSTFIX配置文件"></a>修改POSTFIX配置文件</h1><p>vi /etc/postfix/main.cf<br>myhostname = mail.fmail.com</p>
+<h1 id="重新初始化数据库"><a href="#重新初始化数据库" class="headerlink" title="重新初始化数据库"></a>重新初始化数据库</h1><p>#cd /var/www/extsuite</p>
+<p>#mysql -uroot -p123456<br>mysql&gt; DROP DATABASE extmail;<br>mysql&gt; quit</p>
+<p>##email.com为原域名 fmail.com为现域名<br>[root@mail extsuite]# mysql -uroot -p123456 &lt; extman/docs/extmail.sql<br>[root@mail extsuite]# sed -i ‘s/email.com/fmail.com/g’ extman/docs/init.sql<br>[root@mail extsuite]# sed -i ‘s/1000/1002/g’ extman/docs/init.sql<br>[root@mail extsuite]# mysql -uroot -p123456 &lt; /var/www/extsuite/extman/docs/init.sql</p>
+<h1 id="修改Apache配置"><a href="#修改Apache配置" class="headerlink" title="修改Apache配置"></a>修改Apache配置</h1><p>#vi /etc/httpd/conf.d/extmail.conf<br>ServerName mail.fmail.com</p>
+<p>##修改ServerName</p>
+<h1 id="建立Maildir"><a href="#建立Maildir" class="headerlink" title=" 建立Maildir"></a> 建立Maildir</h1><p>#cd /var/www/extsuite/extman/tools<br>[root@mail tools]# ./maildirmake.pl /home/domains/fmail.com/postmaster/Maildir<br>[root@mail tools]# chown -R vmail:vmail /home/domains</p>
+<h1 id="重新启动"><a href="#重新启动" class="headerlink" title=" 重新启动"></a> 重新启动</h1><p>#shutdown -r now</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/12/08/emailsystembaseoncentos6-5/">
+                
+                    基于CentOS6.5搭建的邮件系统
+                
+            </a>
+        </h2>
+        <time>
+            2016-12-08
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/extmail/">extmail</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <h1 id="1-参考资料"><a href="#1-参考资料" class="headerlink" title="-1 参考资料"></a>-1 参考资料</h1><p>本资料主要参考一下资料整理而成，实现了最基本的WebMail以及IMAP和POP3功能。若要使用更多功能(如反垃圾邮件和防病毒)请到以下参考资料查看。 <a href="http://ywzhou.blog.51cto.com/2785388/d-4" target="_blank" rel="noopener">月晴星飞博客-Postfix邮箱</a> <a href="http://wangzhijian.blog.51cto.com/6427016/1695401" target="_blank" rel="noopener">记事本博客-Postfix+Sasl+Courier-authlib+Dovecot+MySQL+extmail实现WebMail</a> 相关源码包可到 <a href="http://down.51cto.com/data/1955875" target="_blank" rel="noopener">http://down.51cto.com/data/1955875</a> 下载(月晴星飞博客提供) ExtMail可到官网或 <a href="http://ywzhou.blog.51cto.com/2785388/1590022" target="_blank" rel="noopener">Postfix邮箱(三)：安装Webmail前台</a> 下载</p>
+<h1 id="0-准备工作"><a href="#0-准备工作" class="headerlink" title="0 准备工作"></a>0 准备工作</h1><h2 id="0-1-系统环境"><a href="#0-1-系统环境" class="headerlink" title="0.1 系统环境"></a>0.1 系统环境</h2><p>CentOS 6.5 x86_64 下载地址 <a href="http://vault.centos.org/6.5/isos/x86\_64/CentOS-6.5-x86_64-minimal.iso" target="_blank" rel="noopener">http://vault.centos.org/6.5/isos/x86\_64/CentOS-6.5-x86_64-minimal.iso</a> 主机名 mail.email.com IP地址 eth0=192.168.1.92 DNS: 192.168.1.91 (Windows Server) 在DNS中做好到 email.com 的解析 (泛解析及MX记录) 关闭SELinux</p>
+<p>1.永久性关闭（这样需要重启服务器后生效）<br># sed -i ‘s/SELINUX=enforcing/SELINUX=disabled/‘ /etc/selinux/config<br>2.临时性关闭（立即生效，但是重启服务器后失效）<br># setenforce 0 #设置selinux为permissive模式（即关闭）<br># setenforce 1 #设置selinux为enforcing模式（即开启）</p>
+<h2 id="0-2-安装软件"><a href="#0-2-安装软件" class="headerlink" title="0.2 安装软件"></a>0.2 安装软件</h2><p>编译环境</p>
+<p>#yum install gcc gcc-c++</p>
+<p>依赖软件</p>
+<p>#yum install openssl openssl-devel cyrus-sasl libtool-ltdl libtool-ltdl-devel db4 db4-devel expect expect-devel pcre pcre-devel</p>
+<p>LAMP环境</p>
+<p>#yum install httpd httpd-devel mysql mysql-server mysql-devel php php-mysql</p>
+<p>设置防火墙</p>
+<p>#iptables -I INPUT -p tcp -m multiport –dport 21,80 -j ACCEPT</p>
+<p>#service iptables save</p>
+<p>安装EPEL软件源</p>
+<p>#wget <a href="http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm" target="_blank" rel="noopener">http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm</a></p>
+<p>#rpm -ivh epel-release-latest-6.noarch.rpm&gt;</p>
+<p>#yum repolist</p>
+<p>同步系统时间</p>
+<p>#yum install ntpdate&gt;</p>
+<p>#ntpdate time1.aliyun.com &amp;&amp; hwclock -w</p>
+<h1 id="1-安装POSTFIX"><a href="#1-安装POSTFIX" class="headerlink" title="1 安装POSTFIX"></a>1 安装POSTFIX</h1><h2 id="1-1-安装"><a href="#1-1-安装" class="headerlink" title="1.1 安装"></a>1.1 安装</h2><p>[root@mail ~]# rpm -aq|grep postfix<br>postfix-2.6.6-2.2.el6_1.x86_64</p>
+<p>#CentOS6.5已默认安装了2.6.6版本，再升级一下：<br>[root@mail ~]# yum update postfix<br>postfix-2.6.6-6.el6_5.x86_64</p>
+<h2 id="1-2-配置"><a href="#1-2-配置" class="headerlink" title="1.2 配置"></a>1.2 配置</h2><p>[root@mail ~]# cd /etc/postfix<br>[root@mail postfix]# postconf -n /etc/postfix/main2.cf<br>[root@mail postfix]# mv main.cf main.cf.old<br>[root@mail postfix]# mv main2.cf main.cf<br>[root@mail postfix]# vi main.cf<br># 注释掉下面这行，否则25端口只能本地连接<br># inet_interfaces = localhost<br># 添加以下基本配置<br># 主机设置<br>mynetworks = 127.0.0.1<br>myhostname = mail.email.com<br>mydestination = $myhostname, localhost.$mydomain, localhost<br># 显示连接信息<br>mail_name = Postfix - by email.com<br>smtpd_banner = $myhostname ESMTP $mail_name<br># 立即响应<br>smtpd_error_sleep_time = 0s<br># 邮件大小和邮箱大小限制10M、2G<br>message_size_limit = 10485760<br>mailbox_size_limit = 2097152000<br>show_user_unknown_table_name = no<br># 队列超时限制 1天<br>bounce_queue_lifetime = 1d<br>maximal_queue_lifetime = 1d</p>
+<h2 id="1-3-启动"><a href="#1-3-启动" class="headerlink" title="1.3 启动"></a>1.3 启动</h2><p>[root@mail postfix]# service postfix start<br>[root@mail postfix]# chkconfig postfix on<br>[root@mail postfix]# ps aux|grep postfix<br>root 3070 0.0 0.3 81292 3436 ? Ss 13:59 0:00 /usr/libexec/postfix/master<br>postfix 3072 0.0 0.3 81372 3392 ? S 13:59 0:00 pickup -l -t fifo -u<br>postfix 3073 0.0 0.3 81440 3440 ? S 13:59 0:00 qmgr -l -t fifo -u<br>root 3124 0.0 0.0 103248 880 pts/1 S+ 14:02 0:00 grep postfix<br>[root@mail postfix]# netstat -tlnp|grep 25<br>tcp 0 0 127.0.0.1:25 0.0.0.0:<em> LISTEN 3070/master<br>tcp 0 0 ::1:25 :::</em> LISTEN 3070/master</p>
+<h2 id="1-4检查"><a href="#1-4检查" class="headerlink" title="1.4检查"></a>1.4检查</h2><p>[root@mail postfix]# postfix check</p>
+<p>#没有错误返回表示配置正确<br>[root@mail postfix]# postconf -a</p>
+<p>#出现cyrus表示可以支持cyrus认证用户<br>[root@mail postfix]# postconf -m</p>
+<p>#出现mysql表示可以支持mysql存储账号</p>
+<h2 id="1-5设置防火墙"><a href="#1-5设置防火墙" class="headerlink" title="1.5设置防火墙"></a>1.5设置防火墙</h2><p>[root@mail ~]# iptables -I INPUT -p tcp –dport 25 -j ACCEPT<br>[root@mail ~]# service iptables save</p>
+<h1 id="2-安装Courier-Authlib"><a href="#2-安装Courier-Authlib" class="headerlink" title=" 2 安装Courier-Authlib"></a> 2 安装Courier-Authlib</h1><h2 id="2-1-编译安装"><a href="#2-1-编译安装" class="headerlink" title="2.1 编译安装"></a>2.1 编译安装</h2><p>#先查看下uid 1000是否已使用<br>[root@mail ~]# cat /etc/passwd</p>
+<p>#安装系统时创建了一个用户，占用了1000，因此使用1002<br>[root@mail ~]# groupadd vmail -g 1002<br>[root@mail ~]# useradd vmail -u 1002 -g 1002 -d /home/domains<br>[root@mail ~]# cd /usr/local/src<br>[root@mail src]# wget <a href="http://cznic.dl.sourceforge.net/project/courier/authlib/0.66.1/courier-authlib-0.66.1.tar.bz2" target="_blank" rel="noopener">http://cznic.dl.sourceforge.net/project/courier/authlib/0.66.1/courier-authlib-0.66.1.tar.bz2</a><br>[root@mail src]# tar -jxf courier-authlib-0.66.1.tar.bz2<br>[root@mail src]# cd courier-authlib-0.66.1<br>[root@mail courier-authlib-0.66.1]# ./configure –with-mysql-libs –with-mysql-includes –with-authmysql –with-authmysql=yes –with-mailuser=vmail –with-mailgroup=vmail<br>[root@mail courier-authlib-0.66.1]# make<br>[root@mail courier-authlib-0.66.1]# make install<br>[root@mail courier-authlib-0.66.1]# make install-configure</p>
+<p>说明：编译时可能出现报错，基本是因为某些包没有安装，YUM装上后重新编译；因此建议先按上文“系统环境”安装好依赖软件。 mysql参数也可以指定绝对路径： –with-mysql-libs=/usr/local/mysql/lib/mysql\ –with-mysql-includes=/usr/local/mysql/include/mysql/ \</p>
+<h2 id="2-2-配置"><a href="#2-2-配置" class="headerlink" title="2.2 配置"></a>2.2 配置</h2><p>[root@mail courier-authlib-0.66.1]# cd /usr/local/etc/authlib<br>[root@mail authlib]# vi authmysqlrc<br>MYSQL_SERVER localhost<br>MYSQL_USERNAME extmail<br>MYSQL_PASSWORD extmail<br>MYSQL_SOCKET /var/lib/mysql/mysql.sock<br>MYSQL_PORT 3306<br>MYSQL_OPT 0<br>MYSQL_DATABASE extmail<br>MYSQL_USER_TABLE mailbox<br>MYSQL_CRYPT_PWFIELD password<br>MYSQL_UID_FIELD 1002<br>MYSQL_GID_FIELD 1002<br>MYSQL_LOGIN_FIELD username<br>MYSQL_HOME_FIELD homedir<br>MYSQL_NAME_FIELD name<br>MYSQL_MAILDIR_FIELD maildir<br>MYSQL_QUOTA_FIELD quota<br>MYSQL_SELECT_CLAUSE SELECT username,password,””,uidnumber,gidnumber,\<br>CONCAT(‘/home/domains/‘,homedir), \<br>CONCAT(‘/home/domains/‘,maildir), \<br>quota, \<br>name \<br>FROM mailbox \<br>WHERE username = ‘$(local_part)@$(domain)’<br>[root@mail authlib]# vi authdaemonrc<br>authmodulelist=”authmysql”<br>authmodulelistorig=”authmysql”<br>[root@mail authlib]# ln -s /usr/local/etc/authlib /etc/authlib</p>
+<h2 id="2-3启动"><a href="#2-3启动" class="headerlink" title="2.3启动"></a>2.3启动</h2><p>[root@mail authlib]# /usr/local/sbin/authdaemond start<br>[root@mail authlib]# ps aux|grep authdaemond<br>root 9954 0.0 0.0 4308 440 ? S 15:31 0:00 /usr/local/sbin/courierlogger -pid=/usr/local/var/spool/authdaemon/pid<br>-start /usr/local/libexec/courier-authlib/authdaemond<br>root 9955 0.0 0.2 66500 2720 ? S 15:31 0:00 /usr/local/libexec/courier-authlib/authdaemond<br>root 9956 0.0 0.0 66500 748 ? S 15:31 0:00 /usr/local/libexec/courier-authlib/authdaemond<br>root 9957 0.0 0.0 66500 748 ? S 15:31 0:00 /usr/local/libexec/courier-authlib/authdaemond<br>root 9958 0.0 0.0 66500 748 ? S 15:31 0:00 /usr/local/libexec/courier-authlib/authdaemond<br>root 9959 0.0 0.0 66500 748 ? S 15:31 0:00 /usr/local/libexec/courier-authlib/authdaemond<br>root 9960 0.0 0.0 66500 748 ? S 15:31 0:00 /usr/local/libexec/courier-authlib/authdaemond<br>root 10024 0.0 0.0 112656 980 pts/1 S+ 15:31 0:00 grep –color=auto authdaemond<br>[root@mail authlib]# echo “/usr/local/sbin/authdaemond start” &gt;&gt; /etc/rc.d/rc.local</p>
+<h1 id="3-安装Maildrop"><a href="#3-安装Maildrop" class="headerlink" title="3 安装Maildrop"></a>3 安装Maildrop</h1><h2 id="3-1-安装Courier-Unicode"><a href="#3-1-安装Courier-Unicode" class="headerlink" title="3.1 安装Courier-Unicode"></a>3.1 安装Courier-Unicode</h2><p>[root@mail ~]# cd /usr/local/src<br>[root@mail src]# wget <a href="http://jaist.dl.sourceforge.net/project/courier/courier-unicode/1.1/courier-unicode-1.1.tar.bz2" target="_blank" rel="noopener">http://jaist.dl.sourceforge.net/project/courier/courier-unicode/1.1/courier-unicode-1.1.tar.bz2</a><br>[root@mail src]# tar -jxf courier-unicode-1.1.tar.bz2<br>[root@mail src]# cd courier-unicode-1.1<br>[root@mail courier-unicode-1.1]# ./configure<br>[root@mail courier-unicode-1.1]# make &amp;&amp; make install</p>
+<h2 id="3-2-安装Maildrop"><a href="#3-2-安装Maildrop" class="headerlink" title="3.2 安装Maildrop"></a>3.2 安装Maildrop</h2><p>[root@mail ~]# cd /usr/local/src<br>[root@mail src]# wget <a href="http://jaist.dl.sourceforge.net/project/courier/maildrop/2.7.2/maildrop-2.7.2.tar.bz2" target="_blank" rel="noopener">http://jaist.dl.sourceforge.net/project/courier/maildrop/2.7.2/maildrop-2.7.2.tar.bz2</a><br>[root@mail src]# tar -jxf maildrop-2.7.2.tar.bz2<br>[root@mail src]# cd maildrop-2.7.2<br>[root@mail maildrop-2.7.2]# ./configure –enable-maildirquota –enable-maildrop-uid=1002 –enable-maildrop-gid=1002 –with-trashquota<br>[root@mail maildrop-2.7.2]# make<br>[root@mail maildrop-2.7.2]# make install</p>
+<h2 id="3-3-配置"><a href="#3-3-配置" class="headerlink" title="3.3 配置"></a>3.3 配置</h2><p>[root@mail maildrop-2.7.2]# vi /etc/postfix/master.cf<br>maildrop unix - n n - - pipe<br>flags=DRhu user=vmail argv=/usr/local/bin/maildrop -w 90 -d ${user}@${nexthop} ${recipient} ${user} ${extension} {nexthop}</p>
+<p>#flags前的两个空格一定要保留</p>
+<p>[root@mail maildrop-2.7.2]# vi /etc/postfix/main.cf</p>
+<p>#控制maildrop一次只处理一封邮件<br>maildrop_destination_recipient_limit = 1</p>
+<p>用户vmail和组vmail将惯穿整个邮件系统，一定要记住它们的名称vmail和ID号1002，如果不和本文设置的一样，请在编译和配置时修改成你自己的。 建立到libunicode.so的链接</p>
+<p>ln -s /usr/local/lib/libunicode.so.1 /lib64/</p>
+<p>若在上述路径未找到请使用find / -name libunicode.so 查找</p>
+<h1 id="4-Webmail前台"><a href="#4-Webmail前台" class="headerlink" title="4 Webmail前台"></a>4 Webmail前台</h1><h2 id="4-1-安装"><a href="#4-1-安装" class="headerlink" title="4.1 安装"></a>4.1 安装</h2><p>[root@mail ~]# cd /usr/local/src<br>[root@mail src]# tar -zxvf extmail-1.2.tar.gz<br>[root@mail src]# tar -zxvf extman-1.1.tar.gz<br>[root@mail src]# mkdir /var/www/extsuite<br>[root@mail src]# mv extman-1.1 /var/www/extsuite/extman<br>[root@mail src]# mv extmail-1.2 /var/www/extsuite/extmail</p>
+<h2 id="4-2-配置extmail"><a href="#4-2-配置extmail" class="headerlink" title="4.2 配置extmail"></a>4.2 配置extmail</h2><p>[root@mail src]# cd /var/www/extsuite<br>[root@mail extsuite]# cp extmail/webmail.cf.default extmail/webmail.cf<br>[root@mail extsuite]# vi extmail/webmail.cf<br>SYS_MYSQL_USER = extmail<br>SYS_MYSQL_PASS = extmail<br>SYS_MYSQL_DB = extmail</p>
+<h2 id="4-3-配置extman"><a href="#4-3-配置extman" class="headerlink" title="4.3 配置extman"></a>4.3 配置extman</h2><p>[root@mail extsuite]# mkdir /var/www/extsuite/extman/session<br>[root@mail extsuite]# cp extman/webman.cf.default extman/webman.cf<br>[root@mail extsuite]# vi extman/webman.cf<br>SYS_SESS_DIR = /var/www/extsuite/extman/session/<br>SYS_DEFAULT_UID = 1002<br>SYS_DEFAULT_GID = 1002</p>
+<p>注意：用户和组1002是前一小节中创建的用户和组vmail，注意保持一致。目录session用来保存临时会话信息(由于原来的目录会被centos系统随时清理故需要新建目录)。</p>
+<h2 id="4-4-初始化数据库"><a href="#4-4-初始化数据库" class="headerlink" title="4.4 初始化数据库"></a>4.4 初始化数据库</h2><h3 id="4-4-1设置数据库root账户的密码"><a href="#4-4-1设置数据库root账户的密码" class="headerlink" title="4.4.1设置数据库root账户的密码"></a>4.4.1设置数据库root账户的密码</h3><p>[root@mail extsuite]# service mysqld start<br>[root@mail extsuite]# mysql -uroot<br>mysql&gt;set password for root@localhost=password(‘123456’);<br>mysql&gt;quit</p>
+<h3 id="4-4-2-导入数据库及表结构"><a href="#4-4-2-导入数据库及表结构" class="headerlink" title="4.4.2 导入数据库及表结构"></a>4.4.2 导入数据库及表结构</h3><p>[root@mail extsuite]# mysql -uroot -p123456 &lt; extman/docs/extmail.sql</p>
+<h3 id="4-4-3-修改参数并导入数据"><a href="#4-4-3-修改参数并导入数据" class="headerlink" title="4.4.3 修改参数并导入数据"></a>4.4.3 修改参数并导入数据</h3><p>[root@mail extsuite]# sed -i ‘s/extmail.org/email.com/g’ extman/docs/init.sql<br>[root@mail extsuite]# sed -i ‘s/1000/1002/g’ extman/docs/init.sql<br>[root@mail extsuite]# mysql -uroot -p123456 &lt; /var/www/extsuite/extman/docs/init.sql</p>
+<h3 id="4-4-4-查看数据库确认设置"><a href="#4-4-4-查看数据库确认设置" class="headerlink" title="4.4.4 查看数据库确认设置"></a>4.4.4 查看数据库确认设置</h3><p>[root@mail extsuite]# mysql -uroot -p123456<br>mysql&gt; use extmail;<br>mysql&gt; show tables;<br>+——————-+<br>| Tables_in_extmail |<br>+——————-+<br>| alias |<br>| domain |<br>| domain_manager |<br>| mailbox |<br>| manager |<br>+——————-+<br>mysql&gt; select username,uidnumber,gidnumber from mailbox;<br>+————————-+———–+———–+<br>| username | uidnumber | gidnumber |<br>+————————-+———–+———–+<br>| <a href="mailto:postmaster@email.com" target="_blank" rel="noopener">postmaster@email.com</a> | 1002 | 1002 |<br>+————————-+———–+———–+<br>1 row in set (0.00 sec)<br>mysql&gt; quit</p>
+<h2 id="4-5-配置postfix"><a href="#4-5-配置postfix" class="headerlink" title="4.5 配置postfix"></a>4.5 配置postfix</h2><p>[root@mail extsuite]# cp extman/docs/mysql_*.cf /etc/postfix/<br>[root@mail extsuite]# vi /etc/postfix/main.cf<br># 添加 extmail 配置<br>virtual_alias_maps = mysql:/etc/postfix/mysql_virtual_alias_maps.cf<br>virtual_mailbox_domains = mysql:/etc/postfix/mysql_virtual_domains_maps.cf<br>virtual_mailbox_maps = mysql:/etc/postfix/mysql_virtual_mailbox_maps.cf<br>virtual_transport = maildrop<br>virtual_uid_maps = static:1002<br>virtual_gid_maps = static:1002</p>
+<h2 id="4-6-设置文件权限归属"><a href="#4-6-设置文件权限归属" class="headerlink" title="4.6 设置文件权限归属"></a>4.6 设置文件权限归属</h2><p>[root@mail extsuite]# chown root.root -R extmail extman<br>[root@mail extsuite]# chown -R vmail:vmail extmail/cgi/ extman/cgi/ extman/session</p>
+<h2 id="4-7-配置Apache"><a href="#4-7-配置Apache" class="headerlink" title="4.7 配置Apache"></a>4.7 配置Apache</h2><p>[root@mail extsuite]# vi /etc/httpd/conf.d/extmail.conf<br># VirtualHost for ExtMail Solution<br>NameVirtualHost *:80</p>
+<virtualhost *:80=""><br>ServerName mail.email.com<br>DocumentRoot /var/www/extsuite/extmail/html/<br>ScriptAlias /extmail/cgi/ /var/www/extsuite/extmail/cgi/<br>Alias /extmail /var/www/extsuite/extmail/html/<br>ScriptAlias /extman/cgi/ /var/www/extsuite/extman/cgi/<br>Alias /extman /var/www/extsuite/extman/html/<br># Suexec config<br>SuexecUserGroup vmail vmail<br></virtualhost>
+
+<h2 id="4-8-重启相关服务并设置自启"><a href="#4-8-重启相关服务并设置自启" class="headerlink" title="4.8 重启相关服务并设置自启"></a>4.8 重启相关服务并设置自启</h2><p>[root@mail extsuite]# service postfix restart<br>[root@mail extsuite]# service httpd restart<br>[root@mail extsuite]# chkconfig postfix on<br>[root@mail extsuite]# chkconfig httpd on</p>
+<h2 id="4-9建立Maildir"><a href="#4-9建立Maildir" class="headerlink" title="4.9建立Maildir"></a>4.9建立Maildir</h2><p>手动建立Maildir</p>
+<p>[root@mail extsuite]# cd extman/tools<br>[root@mail tools]# ./maildirmake.pl /home/domains/email.com/postmaster/Maildir<br>[root@mail tools]# chown -R vmail:vmail /home/domains</p>
+<p>测试authlib认证登陆账号 必须先启动authdaemond进程，否则报Authentication FAILED: Operation not permitted</p>
+<p>[root@mail tools]# /usr/local/sbin/authtest -s login <a href="mailto:postmaster@email.com" target="_blank" rel="noopener">postmaster@email.com</a> extmail<br>Authentication succeeded.<br>Authenticated: <a href="mailto:postmaster@email.com" target="_blank" rel="noopener">postmaster@email.com</a> (uid 1002, gid 1002)<br>Home Directory: /home/domains/email.com/postmaster<br>Maildir: /home/domains/email.com/postmaster/Maildir/<br>Quota: 104857600S<br>Encrypted Password: $1$phz1mRrj$3ok6BjeaoJYWDBsEPZb5C0<br>Cleartext Password: extmail<br>Options: (none)</p>
+<p>输出表明ExtMan的安装正确，数据库也正确导入，courier-authlib能正确连接到mysql数据库</p>
+<h2 id="4-10安装其他依赖包"><a href="#4-10安装其他依赖包" class="headerlink" title="4.10安装其他依赖包"></a>4.10安装其他依赖包</h2><p># yum install -y rrdtool rrdtool-perl<br># yum install -y cpan perl<br># yum install -y perl-YAML perl-Test-Exception perl-Crypt-PasswdMD5 perl-GD perl-CGI perl-Time-HiRes</p>
+<p># yum install perl-Unix-Syslog<br># yum install perl-File-Tail<br># yum install perl-Encode-HanExtra</p>
+<h2 id="4-11启动进程"><a href="#4-11启动进程" class="headerlink" title="4.11启动进程"></a>4.11启动进程</h2><p>[root@mail tools]# cd /var/www/extsuite/extman<br>[root@mail extman]# cp -R addon/mailgraph_ext/ /usr/local/<br>[root@mail extman]# /usr/local/mailgraph_ext/mailgraph-init start<br>Starting mail statistics grapher: mailgraph_ext<br>Starting queue statistics grapher: qmonitor<br>[root@mail courier-unicode-1.1]# ps aux|grep mailgraph_ext<br>root 63848 0.0 0.5 187384 5884 ? SNs 15:53 0:00 /usr/bin/perl -w /usr/local/mailgraph_ext/mailgraph_ext.pl -l /var/log/maillog -d –daemon-pid=/var/run/mailgraph.pid –daemon-rrd=/var/lib<br>root 63850 0.2 0.4 181624 4204 ? SNs 15:53 0:00 /usr/bin/perl -w /usr/local/mailgraph_ext/qmonitor.pl -d –daemon-pid=/var/run/qmonitor.pid –daemon-rrd=/var/lib<br>root 63852 0.0 0.0 103256 852 pts/1 S+ 15:53 0:00 grep mailgraph_ext<br>[root@mail extman]# /var/www/extsuite/extman/daemon/cmdserver -v -d<br>loaded ok<br>[root@mail extman]# ps aux|grep cmdserver<br>root 36597 0.0 0.5 144572 5288 ? Ss 10:23 0:00 /usr/bin/perl -w /var/www/extsuite/extman/daemon/cmdserver -v -d<br>root 36568 0.0 0.0 112656 980 pts/1 S+ 10:21 0:00 grep –color=auto cmdserver<br>[root@mail extman]# echo “/usr/local/mailgraph_ext/mailgraph-init start” &gt;&gt; /etc/rc.d/rc.local<br>[root@mail extman]# echo “/var/www/extsuite/extman/daemon/cmdserver -v -d” &gt;&gt; /etc/rc.d/rc.local<br>进程mailgraph-init用于生成图形日志；进程cmdserver用于生成extman主页的系统信息。</p>
+<h2 id="4-12定时任务"><a href="#4-12定时任务" class="headerlink" title="4.12定时任务"></a>4.12定时任务</h2><p>[root@mail extman]# crontab -e<br>0 4 <em> </em> <em> /var/www/extsuite/extman/tools/expireusers.pl -all <a href="mailto:postmaster@email.com" target="_blank" rel="noopener">postmaster@email.com</a><br>30 4 </em> <em> </em> /var/www/extsuite/extman/tools/reportusage.pl -all /home/domains <a href="mailto:postmaster@email.com" target="_blank" rel="noopener">postmaster@email.com</a><br>[root@mail extman]# service crond restart</p>
+<p>每天4点发送关于用户到期的报告给管理员邮箱； 每天4点半发送邮箱容量使用情况报告给管理员邮箱。</p>
+<h2 id="4-13-测试Web访问"><a href="#4-13-测试Web访问" class="headerlink" title="4.13 测试Web访问"></a>4.13 测试Web访问</h2><p>Extmail 账号：postmaster 密码：extmail 域名：email.com Extman 账号：<a href="mailto:root@email.com" target="_blank" rel="noopener">root@email.com</a> 密码：extmail*123*</p>
+<h2 id="4-14-检查Maildrop"><a href="#4-14-检查Maildrop" class="headerlink" title="4.14 检查Maildrop"></a>4.14 检查Maildrop</h2><p>查看版本信息</p>
+<p>[root@mail extsuite]# maildrop -v<br>maildrop 2.7.2 Copyright 1998-2005 Double Precision, Inc.<br>GDBM/DB extensions enabled.<br>Courier Authentication Library extension enabled. #必须有这条<br>Maildir quota extension are now always enabled.<br>This program is distributed under the terms of the GNU General Public<br>License. See COPYING for additional information.</p>
+<p>测试Maildrop连接</p>
+<p>[root@mail extsuite]# echo “test” | maildrop -V 10 -d <a href="mailto:postmaster@email.com" target="_blank" rel="noopener">postmaster@email.com</a><br>maildrop: authlib: groupid=1002<br>maildrop: authlib: userid=1002<br>maildrop: authlib: <a href="mailto:logname=postmaster@email.com" target="_blank" rel="noopener">logname=postmaster@email.com</a>, home=/home/domains/email.com/postmaster, mail=/home/domains/email.com/postmaster/Maildir/<br>maildrop: Changing to /home/domains/email.com/postmaster<br>Message envelope sender=MAILER-DAEMON<br>maildrop: Attempting .mailfilter<br>maildrop: Delivery complete.</p>
+<h1 id="5-安装Cyrus-SASL使Postfix支持SMTP认证"><a href="#5-安装Cyrus-SASL使Postfix支持SMTP认证" class="headerlink" title="5 安装Cyrus-SASL使Postfix支持SMTP认证"></a>5 安装Cyrus-SASL使Postfix支持SMTP认证</h1><h2 id="5-1检查所需包是否安装"><a href="#5-1检查所需包是否安装" class="headerlink" title="5.1检查所需包是否安装"></a>5.1检查所需包是否安装</h2><p>[root@mail ~]# rpm -aq|grep cyrus-sasl<br>cyrus-sasl-gssapi-2.1.23-13.el6_3.1.x86_64<br>cyrus-sasl-plain-2.1.23-13.el6_3.1.x86_64<br>cyrus-sasl-lib-2.1.23-13.el6_3.1.x86_64<br>cyrus-sasl-2.1.23-13.el6_3.1.x86_64<br>cyrus-sasl-md5-2.1.23-13.el6_3.1.x86_64</p>
+<p>若缺少以上包请使用yum安装</p>
+<h2 id="5-2配置cyrus-sasl"><a href="#5-2配置cyrus-sasl" class="headerlink" title="5.2配置cyrus-sasl"></a>5.2配置cyrus-sasl</h2><p>[root@mail ~]# vi /etc/sasl2/smtpd.conf</p>
+<p>#pwcheck_method: saslauthd</p>
+<p>#mech_list: plain login<br>pwcheck_method: authdaemond<br>log_level: 3<br>mech_list: PLAIN LOGIN<br>authdaemond_path:/usr/local/var/spool/authdaemon/socket<br>[root@mail ~]# chmod 755 /usr/local/var/spool/authdaemon</p>
+<h2 id="5-3配置postfix"><a href="#5-3配置postfix" class="headerlink" title="5.3配置postfix"></a>5.3配置postfix</h2><p>[root@mail ~]# vi /etc/postfix/main.cf<br># SMTP 收件方限制<br>smtpd_recipient_restrictions =<br>permit_mynetworks,<br>permit_sasl_authenticated,<br>reject_non_fqdn_hostname,<br>reject_non_fqdn_sender,<br>reject_non_fqdn_recipient,<br>reject_unauth_destination,<br>reject_unauth_pipelining,<br>reject_invalid_hostname<br># SMTP 发件方限制<br>smtpd_sender_restrictions =<br>permit_mynetworks,<br>reject_sender_login_mismatch,<br>reject_authenticated_sender_login_mismatch,<br>reject_unauthenticated_sender_login_mismatch<br># SMTP 用户登陆限制<br>smtpd_sender_login_maps =<br>mysql:/etc/postfix/mysql_virtual_sender_maps.cf,<br>mysql:/etc/postfix/mysql_virtual_alias_maps.cf<br># SMTP 认证配置<br>broken_sasl_auth_clients = yes<br>smtpd_sasl_auth_enable = yes<br>smtpd_sasl_local_domain = $myhostname<br>smtpd_sasl_security_options = noanonymous</p>
+<p>重启Postfix [root@mail ~]# service postfix restart</p>
+<h2 id="5-4测试SMTP认证"><a href="#5-4测试SMTP认证" class="headerlink" title="5.4测试SMTP认证"></a>5.4测试SMTP认证</h2><p>获得用户名和密码的Base64编码</p>
+<p>[root@mail ~]# perl -e ‘use MIME::Base64; print encode_base64(“postmaster\@email.com”)’<br>cG9zdG1hc3RlclxAZW1haWwuY29t<br>[root@mail ~]# perl -e ‘use MIME::Base64; print encode_base64(“extmail”)’<br>ZXh0bWFpbA==</p>
+<p>使用telnet测试</p>
+<p>[root@mail ~]# telnet localhost 25<br>Trying ::1…<br>Connected to localhost.<br>Escape character is ‘^]‘.<br>220 mail.email.com ESMTP Postfix - by email.com<br>ehlo localhost #输入hello内容<br>250-mail.email.com<br>250-PIPELINING<br>250-SIZE 10485760<br>250-VRFY<br>250-ETRN<br>250-AUTH PLAIN LOGIN #显示认证登陆表示Postfix成功<br>250-AUTH=PLAIN LOGIN #调用Cyrus-SASL进行SMTP认证<br>250-ENHANCEDSTATUSCODES<br>250-8BITMIME<br>250 DSN<br>auth login #输入认证登陆命令<br>334 VXNlcm5hbWU6<br>cG9zdG1hc3RlclxAZW1haWwuY29t #输入账号的Base64编码<br>334 UGFzc3dvcmQ6<br>ZXh0bWFpbA== #输入密码的Base64编码<br>235 2.7.0 Authentication successful #显示认证成功<br>quit<br>221 2.0.0 Bye<br>Connection closed by foreign host.</p>
+<p>以上信息表示postfix成功使用并通过SMTP认证（cyrus-sasl）</p>
+<h1 id="6-实现POP3、IMAP功能"><a href="#6-实现POP3、IMAP功能" class="headerlink" title="6 实现POP3、IMAP功能"></a>6 实现POP3、IMAP功能</h1><h2 id="6-1-安装Courier-IMAP"><a href="#6-1-安装Courier-IMAP" class="headerlink" title="6.1 安装Courier-IMAP"></a>6.1 安装Courier-IMAP</h2><p>[root@mail ~]# cd /usr/local/src<br>[root@mail src]# wget <a href="http://ncu.dl.sourceforge.net/project/courier/imap/4.15.1/courier-imap-4.15.1.tar.bz2" target="_blank" rel="noopener">http://ncu.dl.sourceforge.net/project/courier/imap/4.15.1/courier-imap-4.15.1.tar.bz2</a><br>[root@mail src]# tar -jxf courier-imap-4.15.1.tar.bz2<br>[root@mail src]# cd courier-imap-4.15.1<br>[root@mail courier-imap-4.15.1]# ./configure –enable-workarounds-for-imap-client-bugs –with-authchangepwdir –enable-unicode –with-trashquota –disable-root-check<br>[root@mail courier-imap-4.15.1]# make<br>[root@mail courier-imap-4.15.1]# make install<br>[root@mail courier-imap-4.15.1]# make install-configure</p>
+<h2 id="6-2-启动imap"><a href="#6-2-启动imap" class="headerlink" title="6.2 启动imap"></a>6.2 启动imap</h2><p>[root@mail courier-imap-4.15.1]# cd /usr/lib/courier-imap/<br>[root@mail courier-imap]# /usr/lib/courier-imap/libexec/imapd.rc start<br>[root@mail courier-imap]# echo “/usr/lib/courier-imap/libexec/imapd.rc start” &gt;&gt; /etc/rc.local<br>[root@mail courier-imap]# ps aux|grep imapd<br>root 46134 0.0 0.0 4068 340 ? S 16:41 0:00 /usr/local/sbin/courierlogger -pid=/var/run/imapd.pid -start -name=imapd /usr/lib/courier-imap/libexec/couriertcpd -address=0 -maxprocs=40 -maxperip=4 -nodnslookup -noidentlookup 143 /usr/lib/courier-imap/sbin/imaplogin /usr/lib/courier-imap/bin/imapd Maildir<br>root 46135 0.1 0.0 8280 636 ? S 16:41 0:00 /usr/lib/courier-imap/libexec/couriertcpd -address=0 -maxprocs=40 -maxperip=4 -nodnslookup -noidentlookup 143 /usr/lib/courier-imap/sbin/imaplogin /usr/lib/courier-imap/bin/imapd Maildir<br>root 46137 0.0 0.0 103256 848 pts/1 S+ 16:41 0:00 grep imapd<br>[root@mail courier-imap]# netstat -tnlp|grep 143<br>tcp6 0 0 :::143 :::* LISTEN 32666/couriertcpd</p>
+<h2 id="6-3-启动pop3"><a href="#6-3-启动pop3" class="headerlink" title="6.3 启动pop3"></a>6.3 启动pop3</h2><p>[root@mail courier-imap]# /usr/lib/courier-imap/libexec/pop3d.rc start<br>[root@mail courier-imap]# echo “/usr/lib/courier-imap/libexec/pop3d.rc start” &gt;&gt; /etc/rc.local<br>[root@mail courier-imap]# ps aux|grep pop3d<br>root 46149 0.0 0.0 4068 344 ? S 16:42 0:00 /usr/local/sbin/courierlogger -pid=/var/run/pop3d.pid -start -name=pop3d /usr/lib/courier-imap/libexec/couriertcpd -address=0 -maxprocs=40 -maxperip=4 -nodnslookup -noidentlookup 110 /usr/lib/courier-imap/sbin/pop3login /usr/lib/courier-imap/bin/pop3d Maildir<br>root 46150 0.0 0.0 8280 632 ? S 16:42 0:00 /usr/lib/courier-imap/libexec/couriertcpd -address=0 -maxprocs=40 -maxperip=4 -nodnslookup -noidentlookup 110 /usr/lib/courier-imap/sbin/pop3login /usr/lib/courier-imap/bin/pop3d Maildir<br>root 46155 0.0 0.0 103256 848 pts/1 S+ 16:42 0:00 grep pop3d<br>[root@mail courier-imap]# netstat -tnlp|grep 110<br>tcp6 0 0 :::110 :::* LISTEN 32761/couriertcpd</p>
+<h2 id="6-4-设置imapd、pop3为启用状态"><a href="#6-4-设置imapd、pop3为启用状态" class="headerlink" title="6.4 设置imapd、pop3为启用状态"></a>6.4 设置imapd、pop3为启用状态</h2><p>[root@mail courier-imap]# sed -i ‘s/IMAPDSTART=NO/IMAPDSTART=YES/g’ etc/imapd<br>[root@mail courier-imap]# sed -i ‘s/POP3DSTART=NO/POP3DSTART=YES/g’ etc/pop3d</p>
+<h2 id="6-5-设置防火墙策略"><a href="#6-5-设置防火墙策略" class="headerlink" title="6.5 设置防火墙策略"></a>6.5 设置防火墙策略</h2><p>[root@mail ~]# iptables -I INPUT -p tcp -m multiport –dport 110,143 -j ACCEPT<br>[root@mail ~]# service iptables save</p>
+<h2 id="6-6-测试IMAP连接"><a href="#6-6-测试IMAP连接" class="headerlink" title="6.6 测试IMAP连接"></a>6.6 测试IMAP连接</h2><p>[root@mail courier-imap]# telnet localhost 110<br>Trying ::1…<br>Connected to localhost.<br>Escape character is ‘^]‘.<br>+OK Hello there.<br>user <a href="mailto:postmaster@email.com" target="_blank" rel="noopener">postmaster@email.com</a> #输入用户账号<br>+OK Password required.<br>pass extmail #输入用户密码<br>+OK logged in.<br>list #显示邮件列表<br>+OK POP3 clients that break here, they violate STD53.<br>1 6<br>2 716<br>3 923<br>4 1197<br>.<br>quit #退出<br>+OK Bye-bye.<br>Connection closed by foreign host.</p>
+<h2 id="6-7-测试POP3连接"><a href="#6-7-测试POP3连接" class="headerlink" title="6.7 测试POP3连接"></a>6.7 测试POP3连接</h2><p>[root@mail courier-imap]# telnet localhost 143<br>Trying ::1…<br>Connected to localhost.<br>Escape character is ‘^]‘.<br>* OK [CAPABILITY IMAP4rev1 UIDPLUS CHILDREN NAMESPACE<br>THREAD=ORDEREDSUBJECT THREAD=REFERENCES SORT QUOTA<br>IDLE ACL ACL2=UNION STARTTLS] Courier-IMAP ready.<br>Copyright 1998-2011 Double Precision, Inc.<br>See COPYING for distribution information.<br>tag login <a href="mailto:postmaster@email.com" target="_blank" rel="noopener">postmaster@email.com</a> extmail #输入登陆账号、密码<br>tag OK LOGIN Ok. #显示登陆成功<br>tag logout #退出<br>* BYE Courier-IMAP server shutting down<br>tag OK LOGOUT completed<br>Connection closed by foreign host.</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/09/26/using-bundle-in-empty-asp-net-mvc-project/">
+                
+                    在空ASP.NET MVC网站中使用Bundle
+                
+            </a>
+        </h2>
+        <time>
+            2016-09-26
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/C/">C#</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <h1 id="1-在NuGet管理器中"><a href="#1-在NuGet管理器中" class="headerlink" title="1.在NuGet管理器中"></a>1.在NuGet管理器中</h1><p>添加包 <strong>Microsoft.AspNet.Web.Optimization</strong></p>
+<h1 id="2-在Global-asax中"><a href="#2-在Global-asax中" class="headerlink" title="2.在Global.asax中"></a>2.在Global.asax中</h1><p>using System.Web.Optimization;</p>
+<p>并在protected void Application_Start()方法中添加语句</p>
+<p>BundleConfig.RegisterBundles(BundleTable.Bundles);</p>
+<h1 id="3-在Views文件夹下的Web-config中"><a href="#3-在Views文件夹下的Web-config中" class="headerlink" title=" 3.在Views文件夹下的Web.config中"></a> 3.在Views文件夹下的Web.config中</h1><p>在configuration节点的system.web.webPages.razor节点的pages pageBaseType=”System.Web.Mvc.WebViewPage”节点的namespaces节点添加</p>
+<add namespace="System.Web.Optimization">
+
+<h1 id="4-在App-Start文件夹下创建类BundleConfig-cs"><a href="#4-在App-Start文件夹下创建类BundleConfig-cs" class="headerlink" title=" 4.在App_Start文件夹下创建类BundleConfig.cs"></a> 4.在App_Start文件夹下创建类BundleConfig.cs</h1><p>using System.Web;<br>using System.Web.Optimization;</p>
+<p>namespace ProjectName<br>{<br>    public class BundleConfig<br>    {<br>        // 有关绑定的详细信息，请访问 <a href="http://go.microsoft.com/fwlink/?LinkId=301862" target="_blank" rel="noopener">http://go.microsoft.com/fwlink/?LinkId=301862</a><br>        public static void RegisterBundles(BundleCollection bundles)<br>        {<br>            bundles.Add(new ScriptBundle(“~/bundles/jquery”).Include(<br>                        “~/Scripts/jquery-{version}.js”));</p>
+<pre><code>        bundles.Add(new ScriptBundle(&quot;~/bundles/jqueryval&quot;).Include(
+                    &quot;~/Scripts/jquery.validate*&quot;));
+
+        // 使用要用于开发和学习的 Modernizr 的开发版本。然后，当你做好
+        // 生产准备时，请使用 http://modernizr.com 上的生成工具来仅选择所需的测试。
+        bundles.Add(new ScriptBundle(&quot;~/bundles/modernizr&quot;).Include(
+                    &quot;~/Scripts/modernizr-*&quot;));
+
+        bundles.Add(new ScriptBundle(&quot;~/bundles/bootstrap&quot;).Include(
+                  &quot;~/Scripts/bootstrap.js&quot;,
+                  &quot;~/Scripts/respond.js&quot;));
+
+        bundles.Add(new StyleBundle(&quot;~/Content/css&quot;).Include(
+                  &quot;~/Content/bootstrap.css&quot;,
+                  &quot;~/Content/site.css&quot;));
+    }
+}
+</code></pre><p>}</p>
+<h1 id="5-在视图中引用"><a href="#5-在视图中引用" class="headerlink" title=" 5.在视图中引用"></a> 5.在视图中引用</h1><p>@Styles.Render(“~/Content/css”)<br>@Scripts.Render(“~/bundles/modernizr”)<br>@Scripts.Render(“~/bundles/jquery”)<br>@Scripts.Render(“~/bundles/bootstrap”)</p>
+</add>
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/09/08/asp-net-mvc-roles/">
+                
+                    ASP.NET MVC实现灵活的角色控制功能
+                
+            </a>
+        </h2>
+        <time>
+            2016-09-08
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/C/">C#</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>采用ASP.NET MVC+Entity Framework</p>
+<h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><p>public class User<br>    {<br>        public string Username { get; set; }<br>        public string Password { get; set; }<br>        public virtual Power Power { get; set; }<br>    }</p>
+<p> public  class Power<br>    {<br>        public bool P_Admin { get; set; }<br>        public bool P_Event { get; set; }<br>        //此处可添加更多权限<br>        //重写tostring方法返回拥有的权限<br>        public override string ToString()<br>        {<br>            Type type = this.GetType();<br>            System.Reflection.PropertyInfo[] ps = type.GetProperties();<br>            String roles=””;<br>            foreach (PropertyInfo i in ps)<br>            {<br>                if (i.PropertyType == typeof(bool))//只获取bool类型的属性<br>                {<br>                    var obj = i.GetValue(this, null);<br>                    if ((bool)obj)<br>                    {<br>                        roles += i.Name+”,”;//值为true的属性加入到权限中以逗号分隔<br>                    }<br>                }<br>            }<br>            roles=roles.Substring(0, roles.Length - 1);<br>            return roles;<br>        }</p>
+<pre><code>}
+</code></pre><h1 id="View"><a href="#View" class="headerlink" title=" View"></a> View</h1><p>@model  ProjectName.Models.User<br>@{<br>    ViewBag.Title = “login”;<br>}</p>
+<div class="row clearfix"><br>    <div class="col-md-4 column"><br>    </div><br>    <div class="col-md-4 column"><br>        <h2>登陆</h2><br>        @Html.ValidationMessage(“CredentialError”, new { style = “color:red;” })<br>        @using (Html.BeginForm(“DoLogin”, “Home”, FormMethod.Post, new { @class = “” }))<br>            {<br><br>            @Html.TextBoxFor(x =&gt; x.Username, new { placeholder = “用户名”, @class = “form-control” })<br>            @Html.ValidationMessageFor(x =&gt; x.Username)<br>            <br><br>            @Html.PasswordFor(x =&gt; x.Password, new { placeholder = “密码”, @class = “form-control” })<br>            <br><br>                <input type="submit" class="btn btn-primary" name="BtnSubmi" value="登陆"><br>        }<br>    </div><br>    <div class="col-md-4 column"><br>    </div><br></div>
+
+<h1 id="Controllers"><a href="#Controllers" class="headerlink" title=" Controllers"></a> Controllers</h1><p>public class HomeController : Controller<br>    {<br>        private Modeldb db = new Modeldb();<br>        // GET: Home<br>        public ActionResult Index()<br>        {<br>            return View();<br>        }</p>
+<pre><code>    public ActionResult Login()
+    {
+        return View();
+    }
+
+    \[HttpPost\]
+    public ActionResult DoLogin(User u)
+    {
+        var user = db.User.Where(a =&gt; a.Username == u.Userame).Select(a =&gt; a);
+
+        if (user.Count() &gt; 0 &amp;&amp; user.First().Password== u.Password)
+        {
+
+
+            FormsAuthenticationTicket ticket = new FormsAuthenticationTicket
+                (
+                    1,
+                    user.First().Username,
+                    DateTime.Now,
+                    DateTime.Now.AddMinutes(20),
+                    true,
+                    user.First().Power.ToString()
+                );
+            var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, FormsAuthentication.Encrypt(ticket));
+            cookie.HttpOnly = true;
+            HttpContext.Response.Cookies.Add(cookie);
+            return RedirectToAction(&quot;Index&quot;, &quot;Admin&quot;);
+        }
+        else
+        {
+            ModelState.AddModelError(&quot;CredentialError&quot;, &quot;用户名或密码不正确&quot;);
+            return View(&quot;Login&quot;, u);
+        }
+
+    }
+
+    public ActionResult Logout()
+    {
+        FormsAuthentication.SignOut();
+        return RedirectToAction(&quot;Login&quot;);
+    }
+}
+</code></pre><h1 id="自定义RoleProvider"><a href="#自定义RoleProvider" class="headerlink" title="自定义RoleProvider"></a>自定义RoleProvider</h1><p>继承RoleProvider只需给出GetRolesForUser的具体实现即可</p>
+<p>namespace ProjectName.utils<br>{<br>    public class CustomRoleProvider: RoleProvider<br>    {<br>        public override string ApplicationName<br>        {<br>            get<br>            {<br>                throw new NotImplementedException();<br>            }</p>
+<pre><code>        set
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public override void AddUsersToRoles(string\[\] usernames, string\[\] roleNames)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void CreateRole(string roleName)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override bool DeleteRole(string roleName, bool throwOnPopulatedRole)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override string\[\] FindUsersInRole(string roleName, string usernameToMatch)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override string\[\] GetAllRoles()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override string\[\] GetRolesForUser(string username)
+    {
+        var cookie = HttpContext.Current.Request.Cookies\[FormsAuthentication.FormsCookieName\];
+        var ticket = FormsAuthentication.Decrypt(cookie.Value);
+        string role = ticket.UserData;
+        return role.Split(&apos;,&apos;);
+    }
+
+    public override string\[\] GetUsersInRole(string roleName)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override bool IsUserInRole(string username, string roleName)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void RemoveUsersFromRoles(string\[\] usernames, string\[\] roleNames)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override bool RoleExists(string roleName)
+    {
+        throw new NotImplementedException();
+    }
+}
+</code></pre><p>}</p>
+<h1 id="配置Web-config"><a href="#配置Web-config" class="headerlink" title="配置Web.config"></a>配置Web.config</h1><p>&lt;system.web&gt;<br>    <compilation debug="true" targetframework="4.5"><br>    <httpruntime targetframework="4.5"><br>    <authentication mode="Forms"><br>      <forms loginurl="~/Home/Login"></forms><br>    </authentication><br>    <rolemanager enabled="true" defaultprovider="CustomRoleProvid"><br>      <providers><br>        <clear><br>        <add name="CustomRoleProvid" type="ProjectName.utils.CustomRoleProvider"><br>      </add></clear></providers><br>    </rolemanager><br>  &lt;/system.web&gt;</httpruntime></compilation></p>
+<p>使用方式 为相应的Controller或ActionResult添加过滤器 允许匿名访问：[AllowAnonymous] 登陆访问：[Authorize] 限制权限访问：[Authorize(Roles =”Admin”)]</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/09/04/asp-net-mvc-crud-simple/">
+                
+                    ASP.NET MVC 创建最简单的CRUD程序
+                
+            </a>
+        </h2>
+        <time>
+            2016-09-04
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/C/">C#</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><h2 id="User-cs"><a href="#User-cs" class="headerlink" title="User.cs"></a>User.cs</h2><p>[Table(“User”)]<br>    public partial class User<br>    {<br>        [Key]<br>        public int UID { get; set; }</p>
+<pre><code>    \[Required\]
+    \[StringLength(10)\]
+    public string username { get; set; }
+
+    \[Required\]
+    \[StringLength(10)\]
+    public string password { get; set; }
+}
+</code></pre><h2 id="ModelUser-cs"><a href="#ModelUser-cs" class="headerlink" title="ModelUser.cs"></a>ModelUser.cs</h2><p>public partial class ModelUser : DbContext<br>    {<br>        public ModelUser()<br>            : base(“name=ModelUser”)//参数为Web.config中连接字符串的标识<br>        {<br>        }</p>
+<pre><code>    public virtual DbSet&lt;User&gt; User { get; set; }
+
+    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity&lt;User&gt;()
+            .Property(e =&gt; e.username)
+            .IsFixedLength();
+
+        modelBuilder.Entity&lt;User&gt;()
+            .Property(e =&gt; e.password)
+            .IsFixedLength();
+    }
+}
+</code></pre><h1 id="View"><a href="#View" class="headerlink" title="View"></a>View</h1><h2 id="Index-cshtml"><a href="#Index-cshtml" class="headerlink" title="Index.cshtml"></a>Index.cshtml</h2><p>@model IEnumerable&lt;UsersCRUD.Models.User&gt;</p>
+<p>@{<br>    ViewBag.Title = “Index”;<br>}</p>
+<h2>Index</h2>
+
+<p><br>    @Html.ActionLink(“Create New”, “Create”)<br></p><br><table class="table"><br>    <tr><br>        <th><br>            @Html.DisplayNameFor(model =&gt; model.username)<br>        </th><br>        <th><br>            @Html.DisplayNameFor(model =&gt; model.password)<br>        </th><br>        <th></th><br>    </tr><br><br>@foreach (var item in Model) {<br>    <tr><br>        <td><br>            @Html.DisplayFor(modelItem =&gt; item.username)<br>        </td><br>        <td><br>            @Html.DisplayFor(modelItem =&gt; item.password)<br>        </td><br>        <td><br>            @Html.ActionLink(“Edit”, “Edit”, new { id=item.UID }) |<br>            @Html.ActionLink(“Details”, “Details”, new { id=item.UID }) |<br>            @Html.ActionLink(“Delete”, “Delete”, new { id=item.UID })<br>        </td><br>    </tr><br>}<br><br></table><br><br> Create.cshtml<br>————–<br><br>@model UsersCRUD.Models.User<br><br>@{<br>    ViewBag.Title = “Create”;<br>}<br><br><h2>Create</h2><br><br><br>@using (Html.BeginForm())<br>{<br>    @Html.AntiForgeryToken()<br><br>    <div class="form-horizontal"><br>        <h4>User</h4><br>        <hr><br>        @Html.ValidationSummary(true, “”, new { @class = “text-danger” })<br>        <div class="form-group"><br>            @Html.LabelFor(model =&gt; model.username, htmlAttributes: new { @class = “control-label col-md-2” })<br>            <div class="col-md-10"><br>                @Html.EditorFor(model =&gt; model.username, new { htmlAttributes = new { @class = “form-control” } })<br>                @Html.ValidationMessageFor(model =&gt; model.username, “”, new { @class = “text-danger” })<br>            </div><br>        </div><br><br>        <div class="form-group"><br>            @Html.LabelFor(model =&gt; model.password, htmlAttributes: new { @class = “control-label col-md-2” })<br>            <div class="col-md-10"><br>                @Html.EditorFor(model =&gt; model.password, new { htmlAttributes = new { @class = “form-control” } })<br>                @Html.ValidationMessageFor(model =&gt; model.password, “”, new { @class = “text-danger” })<br>            </div><br>        </div><br><br>        <div class="form-group"><br>            <div class="col-md-offset-2 col-md-10"><br>                <input type="submit" value="Create" class="btn btn-default"><br>            </div><br>        </div><br>    </div><br>}<br><br><div><br>    @Html.ActionLink(“Back to List”, “Index”)<br></div><br><br><script src="~/Scripts/jquery-1.10.2.min.js"></script><br><script src="~/Scripts/jquery.validate.min.js"></script><br><script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script><br><br> Delete.cshtml<br>————–<br><br>@model UsersCRUD.Models.User<br><br>@{<br>    ViewBag.Title = “Delete”;<br>}<br><br><h2>Delete</h2><br><br><h3>Are you sure you want to delete this?</h3><br><div><br>    <h4>User</h4><br>    <hr><br>    <dl class="dl-horizontal"><br>        <dt><br>            @Html.DisplayNameFor(model =&gt; model.username)<br>        </dt><br><br>        <dd><br>            @Html.DisplayFor(model =&gt; model.username)<br>        </dd><br><br>        <dt><br>            @Html.DisplayNameFor(model =&gt; model.password)<br>        </dt><br><br>        <dd><br>            @Html.DisplayFor(model =&gt; model.password)<br>        </dd><br><br>    </dl><br><br>    @using (Html.BeginForm()) {<br>        @Html.AntiForgeryToken()<br><br>        <div class="form-actions no-color"><br>            <input type="submit" value="Delete" class="btn btn-default"> |<br>            @Html.ActionLink(“Back to List”, “Index”)<br>        </div><br>    }<br></div><br><br> Details.cshtml<br>—————<br><br>@model UsersCRUD.Models.User<br><br>@{<br>    ViewBag.Title = “Details”;<br>}<br><br><h2>Details</h2><br><br><div><br>    <h4>User</h4><br>    <hr><br>    <dl class="dl-horizontal"><br>        <dt><br>            @Html.DisplayNameFor(model =&gt; model.username)<br>        </dt><br><br>        <dd><br>            @Html.DisplayFor(model =&gt; model.username)<br>        </dd><br><br>        <dt><br>            @Html.DisplayNameFor(model =&gt; model.password)<br>        </dt><br><br>        <dd><br>            @Html.DisplayFor(model =&gt; model.password)<br>        </dd><br><br>    </dl><br></div><br><p><br>    @Html.ActionLink(“Edit”, “Edit”, new { id = Model.UID }) |<br>    @Html.ActionLink(“Back to List”, “Index”)<br></p>
+
+<h2 id="Edit-cshtml"><a href="#Edit-cshtml" class="headerlink" title=" Edit.cshtml"></a> Edit.cshtml</h2><p>@model UsersCRUD.Models.User</p>
+<p>@{<br>    ViewBag.Title = “Edit”;<br>}</p>
+<h2>Edit</h2>
+
+
+<p>@using (Html.BeginForm())<br>{<br>    @Html.AntiForgeryToken()</p>
+<pre><code>&lt;div class=&quot;form-horizontal&quot;&gt;
+    &lt;h4&gt;User&lt;/h4&gt;
+    &lt;hr /&gt;
+    @Html.ValidationSummary(true, &quot;&quot;, new { @class = &quot;text-danger&quot; })
+    @Html.HiddenFor(model =&gt; model.UID)
+
+    &lt;div class=&quot;form-group&quot;&gt;
+        @Html.LabelFor(model =&gt; model.username, htmlAttributes: new { @class = &quot;control-label col-md-2&quot; })
+        &lt;div class=&quot;col-md-10&quot;&gt;
+            @Html.EditorFor(model =&gt; model.username, new { htmlAttributes = new { @class = &quot;form-control&quot; } })
+            @Html.ValidationMessageFor(model =&gt; model.username, &quot;&quot;, new { @class = &quot;text-danger&quot; })
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;form-group&quot;&gt;
+        @Html.LabelFor(model =&gt; model.password, htmlAttributes: new { @class = &quot;control-label col-md-2&quot; })
+        &lt;div class=&quot;col-md-10&quot;&gt;
+            @Html.EditorFor(model =&gt; model.password, new { htmlAttributes = new { @class = &quot;form-control&quot; } })
+            @Html.ValidationMessageFor(model =&gt; model.password, &quot;&quot;, new { @class = &quot;text-danger&quot; })
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;div class=&quot;col-md-offset-2 col-md-10&quot;&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Save&quot; class=&quot;btn btn-default&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>}</p>
+<div><br>    @Html.ActionLink(“Back to List”, “Index”)<br></div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<h1 id="Conroller"><a href="#Conroller" class="headerlink" title=" Conroller"></a> Conroller</h1><p>public class UsersController : Controller<br>    {<br>        private ModelUser db = new ModelUser();</p>
+<pre><code>    // GET: Users
+    public ActionResult Index()
+    {
+        return View(db.User.ToList());
+    }
+
+    // GET: Users/Details/5
+    public ActionResult Details(int? id)
+    {
+        if (id == null)
+        {
+            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        }
+        User user = db.User.Find(id);
+        if (user == null)
+        {
+            return HttpNotFound();
+        }
+        return View(user);
+    }
+
+    // GET: Users/Create
+    public ActionResult Create()
+    {
+        return View();
+    }
+
+    // POST: Users/Create
+    // 为了防止“过多发布”攻击，请启用要绑定到的特定属性，有关 
+    // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
+    \[HttpPost\]
+    \[ValidateAntiForgeryToken\]
+    public ActionResult Create(\[Bind(Include = &quot;UID,username,password&quot;)\] User user)
+    {
+        if (ModelState.IsValid)
+        {
+            db.User.Add(user);
+            db.SaveChanges();
+            return RedirectToAction(&quot;Index&quot;);
+        }
+
+        return View(user);
+    }
+
+    // GET: Users/Edit/5
+    public ActionResult Edit(int? id)
+    {
+        if (id == null)
+        {
+            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        }
+        User user = db.User.Find(id);
+        if (user == null)
+        {
+            return HttpNotFound();
+        }
+        return View(user);
+    }
+
+    // POST: Users/Edit/5
+    // 为了防止“过多发布”攻击，请启用要绑定到的特定属性，有关 
+    // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
+    \[HttpPost\]
+    \[ValidateAntiForgeryToken\]
+    public ActionResult Edit(\[Bind(Include = &quot;UID,username,password&quot;)\] User user)
+    {
+        if (ModelState.IsValid)
+        {
+            db.Entry(user).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction(&quot;Index&quot;);
+        }
+        return View(user);
+    }
+
+    // GET: Users/Delete/5
+    public ActionResult Delete(int? id)
+    {
+        if (id == null)
+        {
+            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        }
+        User user = db.User.Find(id);
+        if (user == null)
+        {
+            return HttpNotFound();
+        }
+        return View(user);
+    }
+
+    // POST: Users/Delete/5
+    \[HttpPost, ActionName(&quot;Delete&quot;)\]
+    \[ValidateAntiForgeryToken\]
+    public ActionResult DeleteConfirmed(int id)
+    {
+        User user = db.User.Find(id);
+        db.User.Remove(user);
+        db.SaveChanges();
+        return RedirectToAction(&quot;Index&quot;);
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        if (disposing)
+        {
+            db.Dispose();
+        }
+        base.Dispose(disposing);
+    }
+}
+</code></pre>
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/09/02/asp-net-mvc-crud/">
+                
+                    ASP.NET MVC 通过向导创建CRUD程序
+                
+            </a>
+        </h2>
+        <time>
+            2016-09-02
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/C/">C#</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>1.首先创建好数据库和表 2.打开Visual Studio(以2015Update3版本为例) 3.创建ASP.NET Web应用程序 4.选择Empty模板并勾选MVC引用 5.在Models文件夹添加项 6.选择数据分组中的ASP.NET实体数据模型 7.选择来自数据库的Code First 8.配置好数据连接，<strong>一定要勾选将Web.Config中的设置另存为</strong> 9.勾选需要的表并完成向导 10.<strong>非常重要：生成解决方案</strong> 11.在Controllers文件夹上添加新搭建基架的项目 12.选择包含视图的MVC5控制器（使用Entity Framework） 13.选择相应模型类与数据上下文类并选择添加 至此，一个包含CRUD操作的ASP.NET MVC应用程序已经创建完成</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/09/02/asp-net-mvc-authwithrole/">
+                
+                    ASP.NET MVC有用户角色功能的登陆验证
+                
+            </a>
+        </h2>
+        <time>
+            2016-09-02
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/C/">C#</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><p>public enum UserStatus<br>    {<br>        AuthenticatedAdmin,<br>        AuthentucatedUser,<br>        NonAuthenticatedUser<br>    }</p>
+<p>public class UserDetails<br>    {<br>        [StringLength(7, MinimumLength = 2, ErrorMessage = “UserName length should be between 2 and 7”)]<br>        public string UserName { get; set; }<br>        public string Password { get; set; }<br>    }</p>
+<p>public class UserBusinessLayer<br>        {<br>            public UserStatus GetUserValidity(UserDetails u)<br>            {<br>                if (u.UserName == “Admin” &amp;&amp; u.Password == “Admin”)<br>                {<br>                    return UserStatus.AuthenticatedAdmin;<br>                }<br>                else if (u.UserName == “Sukesh” &amp;&amp; u.Password == “Sukesh”)<br>                {<br>                    return UserStatus.AuthentucatedUser;<br>                }<br>                else<br>                {<br>                    return UserStatus.NonAuthenticatedUser;<br>                }<br>            }<br>        }</p>
+<h1 id="View"><a href="#View" class="headerlink" title=" View"></a> View</h1><p>@model ProjectName.Models.UserDetails<br>@Html.ValidationMessage(“CredentialError”, new {style=”color:red;” })<br>        @using (Html.BeginForm(“DoLogin”, “Authentication”, FormMethod.Post))<br>        {<br>            @Html.LabelFor(c=&gt;c.UserName)<br>            @Html.TextBoxFor(x=&gt;x.UserName)<br>            @Html.ValidationMessageFor(x=&gt;x.UserName)<br>            <br><br>            @Html.LabelFor(c =&gt; c.Password)<br>            @Html.PasswordFor(x =&gt; x.Password)<br>            <br></p>
+<pre><code>    &lt;input type=&quot;submit&quot; name=&quot;BtnSubmi&quot; value=&quot;Login&quot; /&gt;
+}
+</code></pre><h1 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h1><p>[AllowAnonymous]<br>   public class AuthenticationController : Controller<br>   {</p>
+<pre><code>public ActionResult Logout()
+{
+    FormsAuthentication.SignOut();
+    return RedirectToAction(&quot;Login&quot;);
+}
+</code></pre><p>   // GET: Authentication<br>       public ActionResult Login()<br>       {<br>           return View();<br>       }</p>
+<pre><code>\[HttpPost\]
+public ActionResult DoLogin(UserDetails u)
+{
+    if (ModelState.IsValid)
+    {
+        UserBusinessLayer bal = new UserBusinessLayer();
+        UserStatus status = bal.GetUserValidity(u);
+        bool IsAdmin = false;
+        if (status==UserStatus.AuthenticatedAdmin)
+        {
+            IsAdmin = true;
+        }
+        else if (status == UserStatus.AuthentucatedUser)
+        {
+            IsAdmin = false;
+        }
+        else
+        {
+            ModelState.AddModelError(&quot;CredentialError&quot;, &quot;Invalid Username or Password&quot;);
+            return View(&quot;Login&quot;);
+        }
+        FormsAuthentication.SetAuthCookie(u.UserName, false);
+        Session\[&quot;IsAdmin&quot;\] = IsAdmin;
+        return RedirectToAction(&quot;Index&quot;, &quot;Employee&quot;);
+    }
+    else
+    {
+        return View(&quot;Login&quot;);
+    }
+}
+</code></pre><p>   }</p>
+<h1 id="Filter"><a href="#Filter" class="headerlink" title=" Filter"></a> Filter</h1><p>public class AdminFilter:ActionFilterAttribute<br>    {<br>        public override void OnActionExecuting(ActionExecutingContext filterContext)<br>        {<br>            if (!Convert.ToBoolean(filterContext.HttpContext.Session[“IsAdmin”]))<br>            {<br>                filterContext.Result = new ContentResult()<br>                {<br>                    Content=”Unauthorized to access specified resource.”<br>                };<br>            }<br>        }<br>    }</p>
+<h1 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h1><p>为相应的Controller或ActionResult添加过滤器 允许匿名访问：[AllowAnonymous] 登陆访问：[Authorize] 管理员访问：[AdminFilter]</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/09/02/asp-net-mvc-verification/">
+                
+                    ASP.NET MVC 用户登陆验证模块
+                
+            </a>
+        </h2>
+        <time>
+            2016-09-02
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/C/">C#</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><p>public class UserDetails<br>    {<br>        public string UserName { get; set; }<br>        public string Password { get; set; }<br>    }</p>
+<p>public class UserDetailBusinessLayer<br>    {<br>        public bool IsValidUser(UserDetails u)<br>        {<br>            if (u.UserName == “Admin” &amp;&amp; u.Password == “Admin”)<br>            {<br>                return true;<br>            }<br>            else<br>            {<br>                return false;<br>            }<br>        }<br>    }</p>
+<h1 id="View"><a href="#View" class="headerlink" title=" View"></a> View</h1><p>@model ProjectName.Models.UserDetails</p>
+<p></p><h4>登陆</h4><br>@Html.ValidationMessage(“CredentialError”, new { style = “color:red;” })<br>@using (Html.BeginForm(“DoLogin”, “Authentication”, FormMethod.Post)) {<p></p>
+<div class="form-group"><br> <label for="Username">用户</label><input type="text" placeholder="请输入用户名" class="form-control" id="UserName" name="UserName"><br></div>
+
+<div class="form-group"><br> <label for="Password">密码</label><input type="password" placeholder="请输入密码" class="form-control" id="Password" name="Password"><br></div>
+
+<p><div class="form-group"><br> <input type="submit" class="btn btn-primary" name="BtnSubmit" value="登陆"><br></div><br>}</p>
+<h1 id="Controller"><a href="#Controller" class="headerlink" title=" Controller"></a> Controller</h1><p>public class AuthenticationController : Controller<br>    {<br>        // GET: Authentication<br>        public ActionResult Login()<br>        {<br>            return View();<br>        }</p>
+<pre><code>    \[HttpPost\]
+    public ActionResult DoLogin(UserDetails u)
+    {
+        //初始化用户信息业务层
+        var bal = new UserDetailBusinessLayer();
+        if (bal.IsValidUser(u))
+        {
+            FormsAuthentication.SetAuthCookie(u.UserName, false);
+            return RedirectToAction(&quot;Index&quot;, &quot;Admin&quot;);
+        }
+        else
+        {
+            ModelState.AddModelError(&quot;CredentialError&quot;, &quot;用户名或密码输入错误&quot;);
+            return View(&quot;Login&quot;);
+        }
+    }
+
+    public ActionResult Logout()
+    {
+        FormsAuthentication.SignOut();
+        return RedirectToAction(&quot;Login&quot;);
+    }
+}
+</code></pre>
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/08/04/findadsl/">
+                
+                    批处理暴力找回宽带账号
+                
+            </a>
+        </h2>
+        <time>
+            2016-08-04
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/脚本/">脚本</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p>存在这样一种情况： 宽带账号忘记了，密码还记得，小区宽带前部分一样仅后几位不同。 宽带拨号691几次之后服务器会拒绝拨号请求造成678/651错误。 这是即可使用本批处理找回你的宽带账号。</p>
+<p>@echo off<br>REM id为起始ID,ENDID为终止ID,PASSWORD为密码<br>SET id=242006000<br>SET ENDID=242007000<br>SET PASSWORD=888888</p>
+<p>set count=1<br>:1<br>cls</p>
+<p>echo 正在尝试%id%第%count%次</p>
+<p>rasdial “宽带连接” “username” “password” &gt;now.temp</p>
+<p>find “651” now.temp&gt;nul<br>if “%errorlevel%”==”0” (<br>  echo %id%,%password%&gt;&gt;651.csv<br>  goto RETRY<br>)</p>
+<p>find “691” now.temp&gt;nul<br>if “%errorlevel%”==”0” (<br>  echo %id%,%password%&gt;&gt;691.csv<br>  set count=1<br>)</p>
+<p>find “已连接” now.temp&gt;nul<br>if “%errorlevel%”==”0” (<br>  echo %id%,%password%&gt;&gt;success.csv<br>  rasdial “宽带连接” /disconnect<br>)</p>
+<p>set /a id=%id%+1<br>set count=1</p>
+<p>if %id% geq %ENDID% (<br>goto END<br>)</p>
+<p>:RETRY<br>set /a count=%count%+1<br>goto 1</p>
+<p>:END</p>
+<p>@pause</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        <h2 class="title">
+            <a href="/2016/06/24/summary/">
+                
+                    六月总结
+                
+            </a>
+        </h2>
+        <time>
+            2016-06-24
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/C/">C#</a>
+    </div>
+
+
+    </section>
+
+    <section class="article typo">
+        <p><strong>Q：网页内容溢出第一屏时页面不出现滚动条也没办法强制滚动到下一屏</strong> A：原来是不知什么时候在CSS里给body设置了 overflow: hidden;   <strong>Q：使用母版后控件ID发生了变化</strong> A：使用 “#&lt;%=原控件ID.ClientID%&gt;”来选择控件，因为使用了母版之后客户端收到的HTML代码的控件ID会附加上客户端ID 如下：</p>
+<script>
+        $(function () {
+            $("#<%=datepicker.ClientID%>").datepicker({ dateFormat: 'yy-mm-dd' });
+        });
+</script>
+
+
+<p>&lt;asp:TextBox ID=”datepicker” placeholder=”单击以选择日期” runat=”server”&gt;&lt;/asp:TextBox&gt;</p>
+<p>  <strong>Q：CheckBoxList生成的Checkbox修改样式不正常</strong> A：经过观察 默认情况下CheckBox的 RepeatLayout=”Table” 传送到客户端的CheckBox会被套上表格而表格的宽度是Checkbox中最宽的那个元素的宽度，所以解决这个问题可以设置 RepeatLayout=”Flow” 这样生成的CheckBox就不会被套上Table了。   <strong>Q：如何拿到在Web.config中配置的连接字符串</strong> A：ConfigurationManager.ConnectionStrings[“连接字符串名”].ConnectionString 例如： Web.config中配置连接字符串的部分如下：</p>
+<connectionstrings><br>    <add name="ConnectionString" connectionstring="Data Source=DESKTOP-ND7VC8Q\\SQLEXPRESS;Initial Catalog=MenuCMS;Integrated Security=True" providername="System.Data.SqlClient"><br>  </add></connectionstrings>
+
+
+
+<p>using System.Configuration;<br>using System.Data.SqlClient;</p>
+<p>public class SqlCon<br>{<br>private SqlConnection sqlcon;<br>public SqlCon(){<br>sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings[“ConnectionString”].ConnectionString);<br>}</p>
+<p>}</p>
+<p>  <strong>Q：如何定义数据库操作类以便捷操作数据库</strong> A：</p>
+<p>using System;<br>using System.Configuration;<br>using System.Data;<br>using System.Data.SqlClient;</p>
+<p>/// <summary><br>/// SqlData 数据库操作工具类<br>/// </summary><br>public class SqlData<br>{<br>    private SqlConnection sqlcon;<br>    private SqlCommand sqlcom;<br>    private SqlDataAdapter sqldata;<br>    /// <summary><br>    /// 构造函数初始化数据库连接<br>    /// </summary><br>    public SqlData()<br>    {<br>        sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings[“ConnectionString”].ConnectionString);<br>        sqlcon.Open();<br>    }</p>
+<pre><code>/// &lt;summary&gt;
+/// 执行SqlCom返回执行结果
+/// &lt;/summary&gt;
+/// &lt;param name=&quot;SqlCom&quot;&gt;SQL语句&lt;/param&gt;
+/// &lt;returns&gt;&lt;/returns&gt;
+public bool ExceSQL(String SqlCom)
+{
+    sqlcom = new SqlCommand(SqlCom, sqlcon);
+    try
+    {
+        sqlcom.ExecuteNonQuery();
+        return true;
+    }
+    catch
+    {
+        return false;
+    }
+    finally
+    {
+        sqlcon.Close();
+    }
+}
+
+/// &lt;summary&gt;
+/// 执行SqlCom返回DAtaSet
+/// &lt;/summary&gt;
+/// &lt;param name=&quot;SqlCom&quot;&gt;SQL语句&lt;/param&gt;
+/// &lt;returns&gt;&lt;/returns&gt;
+public DataSet ExecDS(String SqlCom)
+{
+    try
+    {
+        sqlcom = new SqlCommand(SqlCom, sqlcon);
+        sqldata = new SqlDataAdapter();
+        sqldata.SelectCommand = sqlcom;
+        DataSet ds = new DataSet();
+        sqldata.Fill(ds);
+        return ds;
+
+    }
+    finally
+    {
+        sqlcon.Close();
+    }
+}
+
+/// &lt;summary&gt;
+/// 执行SqlCom语句返回SqlDataReader
+/// &lt;/summary&gt;
+/// &lt;param name=&quot;SqlCom&quot;&gt;SQL语句&lt;/param&gt;
+/// &lt;returns&gt;&lt;/returns&gt;
+public SqlDataReader ExecRead(String SqlCom)
+{
+    sqlcom = new SqlCommand(SqlCom, sqlcon);
+    SqlDataReader read = sqlcom.ExecuteReader();
+    return read;
+}
+
+public void shut()
+{
+    sqlcon.Close();
+}
+</code></pre><p>}</p>
+<p>  Q:数据库表名起成了USER无法执行SQL语句怎么办？ A:用[]包围关键字如：</p>
+<p>SELECT UserName FROM [User] WHERE UID = 1</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+</section>
+
+
+    <br>
+    <div class="prev-next">
+        <div class="prev-next">
+            
+                <a class="prev" rel="prev" href="/">
+                    <section class="post prev" >
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
+                    </section>
+                </a>
+            
+            <p class="current">
+                2 / 4
+            </p>
+            
+                <a class="next" rel="next" href="/page/3/">
+                    <section class="post next">
+                        &nbsp;下一页&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </section>
+                </a>
+            
+
+        </div>
+    </div>
+
+
+
+        </div>
+        <aside class='l_side'>
+            
+    
+    
+        <section class='m_widget categories'>
+    <div class='header'><i class="fa fa-sitemap fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;分类</div>
+    <div class='content'>
+        
+            <ul class="entry">
+                
+                    <li><a class="flat-box" href="/categories/C/"><div class='name'>C#</div><div class='badge'>11</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/extmail/"><div class='name'>extmail</div><div class='badge'>5</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/前端/"><div class='name'>前端</div><div class='badge'>2</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/服务器与运维/"><div class='name'>服务器与运维</div><div class='badge'>6</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/脚本/"><div class='name'>脚本</div><div class='badge'>2</div></a></li>
+                
+                    <li><a class="flat-box" href="/categories/运维/"><div class='name'>运维</div><div class='badge'>8</div></a></li>
+                
+            </ul>
+        
+    </div>
+</section>
+
+    
+    
+        
+    <section class='m_widget tagcloud'>
+        <div class="header"><i class="fa fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;标签</div>
+        <div class='content'>
+            <a href="/tags/ASP-NET/" style="font-size: 14px; color: #999">ASP.NET</a> <a href="/tags/MVC/" style="font-size: 14px; color: #999">MVC</a> <a href="/tags/Ueditor/" style="font-size: 24px; color: #555">Ueditor</a> <a href="/tags/extmail/" style="font-size: 14px; color: #999">extmail</a> <a href="/tags/html5/" style="font-size: 14px; color: #999">html5</a> <a href="/tags/ie8/" style="font-size: 14px; color: #999">ie8</a> <a href="/tags/video/" style="font-size: 14px; color: #999">video</a> <a href="/tags/中文/" style="font-size: 14px; color: #999">中文</a> <a href="/tags/乱码/" style="font-size: 14px; color: #999">乱码</a> <a href="/tags/在IE8浏览器中播放video标签的视频/" style="font-size: 14px; color: #999">在IE8浏览器中播放video标签的视频</a> <a href="/tags/附件/" style="font-size: 14px; color: #999">附件</a>
+        </div>
+    </section>
+
+
+    
+    
+        <section class='m_widget music'>
+    <div class='header'><i class="fa fa-headphones fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;音乐</div>
+    <div class='content'>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=450 src="//music.163.com/outchain/player?type=0&id=112701651&auto=0&height=450"></iframe>
+    </div>
+</section>
+
+    
+    
+        <section class='m_widget links'>
+    <div class='header'><i class="fa fa-handshake-o fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;友链</div>
+    <div class='content'>
+        <ul class="entry" id="links">
+            
+                <li><a class="flat-box" target="_blank" rel="external nofollow noopener noreferrer" href="https://xaoxuu.com">
+                    <div class='name'>
+                        <i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i>
+                        &nbsp;&nbsp;xaoxuu
+                    </div>
+                </a></li>
+            
+            
+
+        </ul>
+
+    </div>
+</section>
+
+    
+    
+        
+
+    
+
+
+        </aside>
+        <script>setLoadingBarProgress(60);</script>
+    </div>
+    </div>
+    <footer id="footer" class="clearfix">
+    
+        <div class="social-wrapper">
+          
+              
+                  <a href="mailto:finaldusk@live.cn" class="social fa fa-envelope flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+                  <a href="https://github.com/finaldusk" class="social fa fa-github flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+                  <a href="atom" class="social fa fa-rss flat-box" target="_blank" rel="external"></a>
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+        </div>
+    
+    <br>
+    <div>博客内容遵循 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="licenses">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></div>
+    <div>本站使用 <a href="https://github.com/xaoxuu/hexo-theme-material-x" target="_blank" class="codename">Material X</a> 作为主题，
+		总访问量为 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+    </div>
+</footer>
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+    <script>setLoadingBarProgress(80);</script>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<!-- 访问统计 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script src="/js/jquery.fitvids.js"></script>
+
+    <script>
+        var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+        var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+        var ALGOLIA_API_KEY = "";
+        var ALGOLIA_APP_ID = "";
+        var ALGOLIA_INDEX_NAME = "";
+        var AZURE_SERVICE_NAME = "";
+        var AZURE_INDEX_NAME = "";
+        var AZURE_QUERY_KEY = "";
+        var BAIDU_API_ID = "";
+        var SEARCH_SERVICE = "hexo" || "hexo";
+        var ROOT = "/"||"/";
+        if(!ROOT.endsWith('/'))ROOT += '/';
+    </script>
+
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+
+    <script>setLoadingBarProgress(100);</script>
+</body>
